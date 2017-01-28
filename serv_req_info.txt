@@ -1,0 +1,47 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>ERR</sub_system>
+	<file>/quartus/ccl/msg/msg_internal_error.cpp</file>
+	<line>758</line>
+	<callstack>
+	0x76792f71:  + 0x104bd10
+	0x7c359aec:  + 0x6c1288b
+	0x018f6d81:
+	</callstack>
+	<error>*** Fatal Error: Uncaught C++ Exception
+Current editor: WED, RPW, RPW, STED, MED, STED
+Module: quartus.exe</error>
+	<date>Sun Jan 22 18:01:01 2017</date>
+	<version>Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version</version>
+	<full_error>
+*** Fatal Error: Uncaught C++ Exception
+Current editor: WED, RPW, RPW, STED, MED, STED
+Module: quartus.exe
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>ERR</sub_system>
+	<file>/quartus/ccl/msg/msg_internal_error.cpp</file>
+	<line>758</line>
+	<callstack>
+	0x03be7f2e: MEGA_WIZMAN + 0x17f2e
+	0x757a13d0:  + 0x5a16f
+	0x7577e0b8:  + 0x36e57
+	0x7782c691:  + 0x20e5430
+	0x7578e5cb:  + 0x4736a
+	0x7c146ad1:  + 0x69ff870
+	</callstack>
+	<error>*** Fatal Error: Access Violation at 0X03BE7F2E
+Current editor: STED, RPW, RPW, MED
+Module: quartus.exe</error>
+	<date>Thu Jan 26 14:41:58 2017</date>
+	<version>Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version</version>
+	<full_error>
+*** Fatal Error: Access Violation at 0X03BE7F2E
+Current editor: STED, RPW, RPW, MED
+Module: quartus.exe
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version </full_error>
+</internal_error>
+

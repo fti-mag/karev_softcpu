@@ -1,0 +1,795 @@
+Simulator report for SoftCpu
+Thu Jan 26 14:44:35 2017
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ALTSYNCRAM
+  6. |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ALTSYNCRAM
+  7. Coverage Summary
+  8. Complete 1/0-Value Coverage
+  9. Missing 1-Value Coverage
+ 10. Missing 0-Value Coverage
+ 11. Simulator INI Usage
+ 12. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 50.0 us      ;
+; Simulation Netlist Size     ; 446 nodes    ;
+; Simulation Coverage         ;      75.90 % ;
+; Total Number of Transitions ; 128630       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F256C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++----------------------------------------------------------------------------------------------+
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ALTSYNCRAM ;
++----------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++---------------------------------------------------------------------------------------------+
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      75.90 % ;
+; Total nodes checked                                 ; 446          ;
+; Total output ports checked                          ; 502          ;
+; Total output ports with complete 1/0-value coverage ; 381          ;
+; Total output ports with no 1/0-value coverage       ; 116          ;
+; Total output ports with no 1-value coverage         ; 116          ;
+; Total output ports with no 0-value coverage         ; 121          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                ;
++----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                          ; Output Port Name                                                                                   ; Output Port Type ;
++----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_reg_bit1a[0]                    ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|safe_q[0]                               ; regout           ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_reg_bit1a[1]                    ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|safe_q[1]                               ; regout           ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_reg_bit1a[2]                    ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|safe_q[2]                               ; regout           ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_reg_bit1a[3]                    ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|safe_q[3]                               ; regout           ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_reg_bit1a[4]                    ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|safe_q[4]                               ; regout           ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]              ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[0]                         ; regout           ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[1]              ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[1]                         ; regout           ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[2]              ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[2]                         ; regout           ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]              ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[3]                         ; regout           ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]              ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[4]                         ; regout           ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]              ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[5]                         ; regout           ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]              ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[6]                         ; regout           ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[8]           ; portadataout0    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[9]           ; portadataout1    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[16]          ; portadataout2    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[17]          ; portadataout3    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[18]          ; portadataout4    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[19]          ; portadataout5    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[20]          ; portadataout6    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[21]          ; portadataout7    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[22]          ; portadataout8    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[23]          ; portadataout9    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[24]          ; portadataout10   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[25]          ; portadataout11   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[26]          ; portadataout12   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[27]          ; portadataout13   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[28]          ; portadataout14   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[0]           ; portadataout0    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[1]           ; portadataout1    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[2]           ; portadataout2    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[3]           ; portadataout3    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[4]           ; portadataout4    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[5]           ; portadataout5    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[6]           ; portadataout6    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[7]           ; portadataout7    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[10]          ; portadataout8    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[11]          ; portadataout9    ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[12]          ; portadataout10   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[13]          ; portadataout11   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[14]          ; portadataout12   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a0     ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[15]          ; portadataout13   ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[0]            ; portadataout0    ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[1]            ; portadataout1    ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[2]            ; portadataout2    ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[3]            ; portadataout3    ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[4]            ; portadataout4    ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[5]            ; portadataout5    ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[6]            ; portadataout6    ;
+; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0      ; |SoftCpu|ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|q_a[7]            ; portadataout7    ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]    ; regout           ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[1]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[1]    ; regout           ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[2]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[2]    ; regout           ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[3]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[3]    ; regout           ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[4]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[4]    ; regout           ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[5]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[5]    ; regout           ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[6]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[6]    ; regout           ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[7]    ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[7]    ; regout           ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita0                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita0                      ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita0                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita0~COUT                 ; cout             ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita1                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita1                      ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita1                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita1~COUT                 ; cout             ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita2                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita2                      ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita2                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita2~COUT                 ; cout             ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita3                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita3                      ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita3                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita3~COUT                 ; cout             ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita4                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita4                      ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita4                      ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita4~COUT                 ; cout             ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita4~9                    ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|counter_comb_bita4~9                    ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita0                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita0                ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita0                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita0~COUT           ; cout             ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita1                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita1                ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita1                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita1~COUT           ; cout             ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita2                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita2                ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita2                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita2~COUT           ; cout             ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita3                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita3                ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita3                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita3~COUT           ; cout             ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita4                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita4                ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita4                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita4~COUT           ; cout             ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita5                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita5                ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita5                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita5~COUT           ; cout             ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita6                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita6                ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita6                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita6~COUT           ; cout             ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita7                ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_comb_bita7                ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]~53 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]~53 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]~54 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]~54 ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]~54 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[0]~55 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[1]~56 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[1]~56 ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[1]~56 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[1]~57 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[2]~58 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[2]~58 ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[2]~58 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[2]~59 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[3]~60 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[3]~60 ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[3]~60 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[3]~61 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[4]~62 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[4]~62 ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[4]~62 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[4]~63 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[5]~64 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[5]~64 ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[5]~64 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[5]~65 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[6]~66 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[6]~66 ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[6]~66 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[6]~67 ; cout             ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[7]~68 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|pipeline_dffe[7]~68 ; combout          ;
+; |SoftCpu|buf1[0]                                                                                   ; |SoftCpu|buf1[0]                                                                                   ; regout           ;
+; |SoftCpu|buf1[1]                                                                                   ; |SoftCpu|buf1[1]                                                                                   ; regout           ;
+; |SoftCpu|buf1[2]                                                                                   ; |SoftCpu|buf1[2]                                                                                   ; regout           ;
+; |SoftCpu|buf1[3]                                                                                   ; |SoftCpu|buf1[3]                                                                                   ; regout           ;
+; |SoftCpu|buf1[4]                                                                                   ; |SoftCpu|buf1[4]                                                                                   ; regout           ;
+; |SoftCpu|buf1[5]                                                                                   ; |SoftCpu|buf1[5]                                                                                   ; regout           ;
+; |SoftCpu|buf1[6]                                                                                   ; |SoftCpu|buf1[6]                                                                                   ; regout           ;
+; |SoftCpu|buf1[7]                                                                                   ; |SoftCpu|buf1[7]                                                                                   ; regout           ;
+; |SoftCpu|buf2[0]                                                                                   ; |SoftCpu|buf2[0]                                                                                   ; regout           ;
+; |SoftCpu|buf2[1]                                                                                   ; |SoftCpu|buf2[1]                                                                                   ; regout           ;
+; |SoftCpu|buf2[2]                                                                                   ; |SoftCpu|buf2[2]                                                                                   ; regout           ;
+; |SoftCpu|buf2[3]                                                                                   ; |SoftCpu|buf2[3]                                                                                   ; regout           ;
+; |SoftCpu|buf2[4]                                                                                   ; |SoftCpu|buf2[4]                                                                                   ; regout           ;
+; |SoftCpu|buf2[5]                                                                                   ; |SoftCpu|buf2[5]                                                                                   ; regout           ;
+; |SoftCpu|write_acum_en~239                                                                         ; |SoftCpu|write_acum_en~239                                                                         ; combout          ;
+; |SoftCpu|op_12~74                                                                                  ; |SoftCpu|op_12~74                                                                                  ; combout          ;
+; |SoftCpu|write_acum_en~240                                                                         ; |SoftCpu|write_acum_en~240                                                                         ; combout          ;
+; |SoftCpu|_~9625                                                                                    ; |SoftCpu|_~9625                                                                                    ; combout          ;
+; |SoftCpu|write_acum_en~241                                                                         ; |SoftCpu|write_acum_en~241                                                                         ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|cmpr2_aeb_int~11                        ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|cmpr2_aeb_int~11                        ; combout          ;
+; |SoftCpu|write_acum_en~243                                                                         ; |SoftCpu|write_acum_en~243                                                                         ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|cmpr2_aeb_int~12                        ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|cmpr2_aeb_int~12                        ; combout          ;
+; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|cout_actual                             ; |SoftCpu|lpm_counter:stage_counter|cntr_r8h:auto_generated|cout_actual                             ; combout          ;
+; |SoftCpu|_~9626                                                                                    ; |SoftCpu|_~9626                                                                                    ; combout          ;
+; |SoftCpu|_~679                                                                                     ; |SoftCpu|_~679                                                                                     ; combout          ;
+; |SoftCpu|op_35~104                                                                                 ; |SoftCpu|op_35~104                                                                                 ; combout          ;
+; |SoftCpu|op_35~105                                                                                 ; |SoftCpu|op_35~105                                                                                 ; combout          ;
+; |SoftCpu|op_12~75                                                                                  ; |SoftCpu|op_12~75                                                                                  ; combout          ;
+; |SoftCpu|_~703                                                                                     ; |SoftCpu|_~703                                                                                     ; combout          ;
+; |SoftCpu|_~9627                                                                                    ; |SoftCpu|_~9627                                                                                    ; combout          ;
+; |SoftCpu|write_ram_en~532                                                                          ; |SoftCpu|write_ram_en~532                                                                          ; combout          ;
+; |SoftCpu|_~9628                                                                                    ; |SoftCpu|_~9628                                                                                    ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~912          ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~912          ; combout          ;
+; |SoftCpu|_~9629                                                                                    ; |SoftCpu|_~9629                                                                                    ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~9            ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~9            ; combout          ;
+; |SoftCpu|op_1~69                                                                                   ; |SoftCpu|op_1~69                                                                                   ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[1]~914          ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[1]~914          ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[1]~915          ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[1]~915          ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[2]~916          ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[2]~916          ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[2]~917          ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[2]~917          ; combout          ;
+; |SoftCpu|write_ram_en~533                                                                          ; |SoftCpu|write_ram_en~533                                                                          ; combout          ;
+; |SoftCpu|write_ram_en~1                                                                            ; |SoftCpu|write_ram_en~1                                                                            ; combout          ;
+; |SoftCpu|write_ram_en~534                                                                          ; |SoftCpu|write_ram_en~534                                                                          ; combout          ;
+; |SoftCpu|op_16~65                                                                                  ; |SoftCpu|op_16~65                                                                                  ; combout          ;
+; |SoftCpu|_~9631                                                                                    ; |SoftCpu|_~9631                                                                                    ; combout          ;
+; |SoftCpu|_~9632                                                                                    ; |SoftCpu|_~9632                                                                                    ; combout          ;
+; |SoftCpu|_~9633                                                                                    ; |SoftCpu|_~9633                                                                                    ; combout          ;
+; |SoftCpu|write_ram_en~5                                                                            ; |SoftCpu|write_ram_en~5                                                                            ; combout          ;
+; |SoftCpu|write_ram_en~535                                                                          ; |SoftCpu|write_ram_en~535                                                                          ; combout          ;
+; |SoftCpu|write_ram_en~536                                                                          ; |SoftCpu|write_ram_en~536                                                                          ; combout          ;
+; |SoftCpu|_~9634                                                                                    ; |SoftCpu|_~9634                                                                                    ; combout          ;
+; |SoftCpu|_~9635                                                                                    ; |SoftCpu|_~9635                                                                                    ; combout          ;
+; |SoftCpu|_~9636                                                                                    ; |SoftCpu|_~9636                                                                                    ; combout          ;
+; |SoftCpu|buf5[7]~107                                                                               ; |SoftCpu|buf5[7]~107                                                                               ; combout          ;
+; |SoftCpu|op_23~74                                                                                  ; |SoftCpu|op_23~74                                                                                  ; combout          ;
+; |SoftCpu|buf5[7]~108                                                                               ; |SoftCpu|buf5[7]~108                                                                               ; combout          ;
+; |SoftCpu|_~9637                                                                                    ; |SoftCpu|_~9637                                                                                    ; combout          ;
+; |SoftCpu|op_21~69                                                                                  ; |SoftCpu|op_21~69                                                                                  ; combout          ;
+; |SoftCpu|op_19~60                                                                                  ; |SoftCpu|op_19~60                                                                                  ; combout          ;
+; |SoftCpu|buf3[7]~0                                                                                 ; |SoftCpu|buf3[7]~0                                                                                 ; combout          ;
+; |SoftCpu|_~9638                                                                                    ; |SoftCpu|_~9638                                                                                    ; combout          ;
+; |SoftCpu|_~9639                                                                                    ; |SoftCpu|_~9639                                                                                    ; combout          ;
+; |SoftCpu|_~526                                                                                     ; |SoftCpu|_~526                                                                                     ; combout          ;
+; |SoftCpu|_~9640                                                                                    ; |SoftCpu|_~9640                                                                                    ; combout          ;
+; |SoftCpu|buf3[0]                                                                                   ; |SoftCpu|buf3[0]                                                                                   ; regout           ;
+; |SoftCpu|buf4[7]~0                                                                                 ; |SoftCpu|buf4[7]~0                                                                                 ; combout          ;
+; |SoftCpu|_~9641                                                                                    ; |SoftCpu|_~9641                                                                                    ; combout          ;
+; |SoftCpu|buf5[0]                                                                                   ; |SoftCpu|buf5[0]                                                                                   ; regout           ;
+; |SoftCpu|_~9642                                                                                    ; |SoftCpu|_~9642                                                                                    ; combout          ;
+; |SoftCpu|write_ram_en~6                                                                            ; |SoftCpu|write_ram_en~6                                                                            ; combout          ;
+; |SoftCpu|buf1[0]~249                                                                               ; |SoftCpu|buf1[0]~249                                                                               ; combout          ;
+; |SoftCpu|buf1[0]~250                                                                               ; |SoftCpu|buf1[0]~250                                                                               ; combout          ;
+; |SoftCpu|_~9643                                                                                    ; |SoftCpu|_~9643                                                                                    ; combout          ;
+; |SoftCpu|buf1[0]~251                                                                               ; |SoftCpu|buf1[0]~251                                                                               ; combout          ;
+; |SoftCpu|_~9644                                                                                    ; |SoftCpu|_~9644                                                                                    ; combout          ;
+; |SoftCpu|_~9645                                                                                    ; |SoftCpu|_~9645                                                                                    ; combout          ;
+; |SoftCpu|_~9646                                                                                    ; |SoftCpu|_~9646                                                                                    ; combout          ;
+; |SoftCpu|_~9647                                                                                    ; |SoftCpu|_~9647                                                                                    ; combout          ;
+; |SoftCpu|buf3[1]                                                                                   ; |SoftCpu|buf3[1]                                                                                   ; regout           ;
+; |SoftCpu|_~9648                                                                                    ; |SoftCpu|_~9648                                                                                    ; combout          ;
+; |SoftCpu|buf5[1]                                                                                   ; |SoftCpu|buf5[1]                                                                                   ; regout           ;
+; |SoftCpu|_~9649                                                                                    ; |SoftCpu|_~9649                                                                                    ; combout          ;
+; |SoftCpu|_~9650                                                                                    ; |SoftCpu|_~9650                                                                                    ; combout          ;
+; |SoftCpu|_~9651                                                                                    ; |SoftCpu|_~9651                                                                                    ; combout          ;
+; |SoftCpu|_~9652                                                                                    ; |SoftCpu|_~9652                                                                                    ; combout          ;
+; |SoftCpu|buf3[2]                                                                                   ; |SoftCpu|buf3[2]                                                                                   ; regout           ;
+; |SoftCpu|_~9653                                                                                    ; |SoftCpu|_~9653                                                                                    ; combout          ;
+; |SoftCpu|buf5[2]                                                                                   ; |SoftCpu|buf5[2]                                                                                   ; regout           ;
+; |SoftCpu|_~9654                                                                                    ; |SoftCpu|_~9654                                                                                    ; combout          ;
+; |SoftCpu|_~9655                                                                                    ; |SoftCpu|_~9655                                                                                    ; combout          ;
+; |SoftCpu|_~9656                                                                                    ; |SoftCpu|_~9656                                                                                    ; combout          ;
+; |SoftCpu|_~9657                                                                                    ; |SoftCpu|_~9657                                                                                    ; combout          ;
+; |SoftCpu|buf3[3]                                                                                   ; |SoftCpu|buf3[3]                                                                                   ; regout           ;
+; |SoftCpu|_~9658                                                                                    ; |SoftCpu|_~9658                                                                                    ; combout          ;
+; |SoftCpu|buf5[3]                                                                                   ; |SoftCpu|buf5[3]                                                                                   ; regout           ;
+; |SoftCpu|_~9659                                                                                    ; |SoftCpu|_~9659                                                                                    ; combout          ;
+; |SoftCpu|_~9660                                                                                    ; |SoftCpu|_~9660                                                                                    ; combout          ;
+; |SoftCpu|_~9661                                                                                    ; |SoftCpu|_~9661                                                                                    ; combout          ;
+; |SoftCpu|buf3[4]                                                                                   ; |SoftCpu|buf3[4]                                                                                   ; regout           ;
+; |SoftCpu|buf5[4]                                                                                   ; |SoftCpu|buf5[4]                                                                                   ; regout           ;
+; |SoftCpu|_~9665                                                                                    ; |SoftCpu|_~9665                                                                                    ; combout          ;
+; |SoftCpu|_~9666                                                                                    ; |SoftCpu|_~9666                                                                                    ; combout          ;
+; |SoftCpu|buf3[5]                                                                                   ; |SoftCpu|buf3[5]                                                                                   ; regout           ;
+; |SoftCpu|buf5[5]                                                                                   ; |SoftCpu|buf5[5]                                                                                   ; regout           ;
+; |SoftCpu|_~9670                                                                                    ; |SoftCpu|_~9670                                                                                    ; combout          ;
+; |SoftCpu|_~9671                                                                                    ; |SoftCpu|_~9671                                                                                    ; combout          ;
+; |SoftCpu|buf3[6]                                                                                   ; |SoftCpu|buf3[6]                                                                                   ; regout           ;
+; |SoftCpu|_~9673                                                                                    ; |SoftCpu|_~9673                                                                                    ; combout          ;
+; |SoftCpu|buf5[6]                                                                                   ; |SoftCpu|buf5[6]                                                                                   ; regout           ;
+; |SoftCpu|_~9675                                                                                    ; |SoftCpu|_~9675                                                                                    ; combout          ;
+; |SoftCpu|_~9676                                                                                    ; |SoftCpu|_~9676                                                                                    ; combout          ;
+; |SoftCpu|buf5[7]                                                                                   ; |SoftCpu|buf5[7]                                                                                   ; regout           ;
+; |SoftCpu|_~9680                                                                                    ; |SoftCpu|_~9680                                                                                    ; combout          ;
+; |SoftCpu|_~9681                                                                                    ; |SoftCpu|_~9681                                                                                    ; combout          ;
+; |SoftCpu|_~9683                                                                                    ; |SoftCpu|_~9683                                                                                    ; combout          ;
+; |SoftCpu|_~9684                                                                                    ; |SoftCpu|_~9684                                                                                    ; combout          ;
+; |SoftCpu|_~9686                                                                                    ; |SoftCpu|_~9686                                                                                    ; combout          ;
+; |SoftCpu|_~9687                                                                                    ; |SoftCpu|_~9687                                                                                    ; combout          ;
+; |SoftCpu|_~9689                                                                                    ; |SoftCpu|_~9689                                                                                    ; combout          ;
+; |SoftCpu|_~9690                                                                                    ; |SoftCpu|_~9690                                                                                    ; combout          ;
+; |SoftCpu|_~9692                                                                                    ; |SoftCpu|_~9692                                                                                    ; combout          ;
+; |SoftCpu|_~9693                                                                                    ; |SoftCpu|_~9693                                                                                    ; combout          ;
+; |SoftCpu|_~9695                                                                                    ; |SoftCpu|_~9695                                                                                    ; combout          ;
+; |SoftCpu|_~9698                                                                                    ; |SoftCpu|_~9698                                                                                    ; combout          ;
+; |SoftCpu|_~9699                                                                                    ; |SoftCpu|_~9699                                                                                    ; combout          ;
+; |SoftCpu|_~9701                                                                                    ; |SoftCpu|_~9701                                                                                    ; combout          ;
+; |SoftCpu|op_26~41                                                                                  ; |SoftCpu|op_26~41                                                                                  ; combout          ;
+; |SoftCpu|calc_alu_en~3                                                                             ; |SoftCpu|calc_alu_en~3                                                                             ; combout          ;
+; |SoftCpu|buf4[0]                                                                                   ; |SoftCpu|buf4[0]                                                                                   ; regout           ;
+; |SoftCpu|_~9703                                                                                    ; |SoftCpu|_~9703                                                                                    ; combout          ;
+; |SoftCpu|_~656                                                                                     ; |SoftCpu|_~656                                                                                     ; combout          ;
+; |SoftCpu|_~9704                                                                                    ; |SoftCpu|_~9704                                                                                    ; combout          ;
+; |SoftCpu|_~9705                                                                                    ; |SoftCpu|_~9705                                                                                    ; combout          ;
+; |SoftCpu|_~9706                                                                                    ; |SoftCpu|_~9706                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~9                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~9                 ; combout          ;
+; |SoftCpu|calc_alu_en~263                                                                           ; |SoftCpu|calc_alu_en~263                                                                           ; combout          ;
+; |SoftCpu|_~9707                                                                                    ; |SoftCpu|_~9707                                                                                    ; combout          ;
+; |SoftCpu|_~9708                                                                                    ; |SoftCpu|_~9708                                                                                    ; combout          ;
+; |SoftCpu|calc_alu_en                                                                               ; |SoftCpu|calc_alu_en                                                                               ; combout          ;
+; |SoftCpu|buf4[1]                                                                                   ; |SoftCpu|buf4[1]                                                                                   ; regout           ;
+; |SoftCpu|_~9710                                                                                    ; |SoftCpu|_~9710                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~8                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~8                 ; combout          ;
+; |SoftCpu|_~9711                                                                                    ; |SoftCpu|_~9711                                                                                    ; combout          ;
+; |SoftCpu|_~9712                                                                                    ; |SoftCpu|_~9712                                                                                    ; combout          ;
+; |SoftCpu|buf4[2]                                                                                   ; |SoftCpu|buf4[2]                                                                                   ; regout           ;
+; |SoftCpu|_~9714                                                                                    ; |SoftCpu|_~9714                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~7                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~7                 ; combout          ;
+; |SoftCpu|_~9715                                                                                    ; |SoftCpu|_~9715                                                                                    ; combout          ;
+; |SoftCpu|_~9716                                                                                    ; |SoftCpu|_~9716                                                                                    ; combout          ;
+; |SoftCpu|buf4[3]                                                                                   ; |SoftCpu|buf4[3]                                                                                   ; regout           ;
+; |SoftCpu|_~9718                                                                                    ; |SoftCpu|_~9718                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~6                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~6                 ; combout          ;
+; |SoftCpu|_~9719                                                                                    ; |SoftCpu|_~9719                                                                                    ; combout          ;
+; |SoftCpu|_~9720                                                                                    ; |SoftCpu|_~9720                                                                                    ; combout          ;
+; |SoftCpu|buf4[4]                                                                                   ; |SoftCpu|buf4[4]                                                                                   ; regout           ;
+; |SoftCpu|_~9722                                                                                    ; |SoftCpu|_~9722                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~5                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~5                 ; combout          ;
+; |SoftCpu|_~9723                                                                                    ; |SoftCpu|_~9723                                                                                    ; combout          ;
+; |SoftCpu|_~9724                                                                                    ; |SoftCpu|_~9724                                                                                    ; combout          ;
+; |SoftCpu|buf4[5]                                                                                   ; |SoftCpu|buf4[5]                                                                                   ; regout           ;
+; |SoftCpu|_~9726                                                                                    ; |SoftCpu|_~9726                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~4                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~4                 ; combout          ;
+; |SoftCpu|_~9727                                                                                    ; |SoftCpu|_~9727                                                                                    ; combout          ;
+; |SoftCpu|_~9728                                                                                    ; |SoftCpu|_~9728                                                                                    ; combout          ;
+; |SoftCpu|buf4[6]                                                                                   ; |SoftCpu|buf4[6]                                                                                   ; regout           ;
+; |SoftCpu|_~9730                                                                                    ; |SoftCpu|_~9730                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~3                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~3                 ; combout          ;
+; |SoftCpu|_~9731                                                                                    ; |SoftCpu|_~9731                                                                                    ; combout          ;
+; |SoftCpu|_~9732                                                                                    ; |SoftCpu|_~9732                                                                                    ; combout          ;
+; |SoftCpu|_~9734                                                                                    ; |SoftCpu|_~9734                                                                                    ; combout          ;
+; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~2                 ; |SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component|add_sub_g1j:auto_generated|_~2                 ; combout          ;
+; |SoftCpu|buf1[0]~252                                                                               ; |SoftCpu|buf1[0]~252                                                                               ; combout          ;
+; |SoftCpu|buf1[1]~253                                                                               ; |SoftCpu|buf1[1]~253                                                                               ; combout          ;
+; |SoftCpu|buf1[2]~254                                                                               ; |SoftCpu|buf1[2]~254                                                                               ; combout          ;
+; |SoftCpu|buf1[3]~255                                                                               ; |SoftCpu|buf1[3]~255                                                                               ; combout          ;
+; |SoftCpu|buf1[4]~256                                                                               ; |SoftCpu|buf1[4]~256                                                                               ; combout          ;
+; |SoftCpu|buf1[5]~257                                                                               ; |SoftCpu|buf1[5]~257                                                                               ; combout          ;
+; |SoftCpu|buf1[6]~258                                                                               ; |SoftCpu|buf1[6]~258                                                                               ; combout          ;
+; |SoftCpu|buf1[7]~259                                                                               ; |SoftCpu|buf1[7]~259                                                                               ; combout          ;
+; |SoftCpu|buf2[0]~7                                                                                 ; |SoftCpu|buf2[0]~7                                                                                 ; combout          ;
+; |SoftCpu|_out_stage_counter[0]                                                                     ; |SoftCpu|_out_stage_counter[0]                                                                     ; padio            ;
+; |SoftCpu|_out_stage_counter[1]                                                                     ; |SoftCpu|_out_stage_counter[1]                                                                     ; padio            ;
+; |SoftCpu|_out_stage_counter[2]                                                                     ; |SoftCpu|_out_stage_counter[2]                                                                     ; padio            ;
+; |SoftCpu|_out_stage_counter[3]                                                                     ; |SoftCpu|_out_stage_counter[3]                                                                     ; padio            ;
+; |SoftCpu|_out_stage_counter[4]                                                                     ; |SoftCpu|_out_stage_counter[4]                                                                     ; padio            ;
+; |SoftCpu|_out_instruction_counter[0]                                                               ; |SoftCpu|_out_instruction_counter[0]                                                               ; padio            ;
+; |SoftCpu|_out_instruction_counter[1]                                                               ; |SoftCpu|_out_instruction_counter[1]                                                               ; padio            ;
+; |SoftCpu|_out_instruction_counter[2]                                                               ; |SoftCpu|_out_instruction_counter[2]                                                               ; padio            ;
+; |SoftCpu|_out_instruction_counter[3]                                                               ; |SoftCpu|_out_instruction_counter[3]                                                               ; padio            ;
+; |SoftCpu|_out_instruction_counter[4]                                                               ; |SoftCpu|_out_instruction_counter[4]                                                               ; padio            ;
+; |SoftCpu|_out_instruction_counter[5]                                                               ; |SoftCpu|_out_instruction_counter[5]                                                               ; padio            ;
+; |SoftCpu|_out_instruction_counter[6]                                                               ; |SoftCpu|_out_instruction_counter[6]                                                               ; padio            ;
+; |SoftCpu|_out_command[0]                                                                           ; |SoftCpu|_out_command[0]                                                                           ; padio            ;
+; |SoftCpu|_out_command[1]                                                                           ; |SoftCpu|_out_command[1]                                                                           ; padio            ;
+; |SoftCpu|_out_command[2]                                                                           ; |SoftCpu|_out_command[2]                                                                           ; padio            ;
+; |SoftCpu|_out_command[3]                                                                           ; |SoftCpu|_out_command[3]                                                                           ; padio            ;
+; |SoftCpu|_out_command[4]                                                                           ; |SoftCpu|_out_command[4]                                                                           ; padio            ;
+; |SoftCpu|_out_argument1[0]                                                                         ; |SoftCpu|_out_argument1[0]                                                                         ; padio            ;
+; |SoftCpu|_out_argument1[1]                                                                         ; |SoftCpu|_out_argument1[1]                                                                         ; padio            ;
+; |SoftCpu|_out_argument1[2]                                                                         ; |SoftCpu|_out_argument1[2]                                                                         ; padio            ;
+; |SoftCpu|_out_argument1[3]                                                                         ; |SoftCpu|_out_argument1[3]                                                                         ; padio            ;
+; |SoftCpu|_out_argument1[4]                                                                         ; |SoftCpu|_out_argument1[4]                                                                         ; padio            ;
+; |SoftCpu|_out_argument1[5]                                                                         ; |SoftCpu|_out_argument1[5]                                                                         ; padio            ;
+; |SoftCpu|_out_argument1[6]                                                                         ; |SoftCpu|_out_argument1[6]                                                                         ; padio            ;
+; |SoftCpu|_out_argument1[7]                                                                         ; |SoftCpu|_out_argument1[7]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[0]                                                                         ; |SoftCpu|_out_argument2[0]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[1]                                                                         ; |SoftCpu|_out_argument2[1]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[2]                                                                         ; |SoftCpu|_out_argument2[2]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[3]                                                                         ; |SoftCpu|_out_argument2[3]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[4]                                                                         ; |SoftCpu|_out_argument2[4]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[5]                                                                         ; |SoftCpu|_out_argument2[5]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[6]                                                                         ; |SoftCpu|_out_argument2[6]                                                                         ; padio            ;
+; |SoftCpu|_out_argument2[7]                                                                         ; |SoftCpu|_out_argument2[7]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[0]                                                                         ; |SoftCpu|_out_argument3[0]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[1]                                                                         ; |SoftCpu|_out_argument3[1]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[2]                                                                         ; |SoftCpu|_out_argument3[2]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[3]                                                                         ; |SoftCpu|_out_argument3[3]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[4]                                                                         ; |SoftCpu|_out_argument3[4]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[5]                                                                         ; |SoftCpu|_out_argument3[5]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[6]                                                                         ; |SoftCpu|_out_argument3[6]                                                                         ; padio            ;
+; |SoftCpu|_out_argument3[7]                                                                         ; |SoftCpu|_out_argument3[7]                                                                         ; padio            ;
+; |SoftCpu|_out_cell[0]                                                                              ; |SoftCpu|_out_cell[0]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[1]                                                                              ; |SoftCpu|_out_cell[1]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[2]                                                                              ; |SoftCpu|_out_cell[2]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[3]                                                                              ; |SoftCpu|_out_cell[3]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[4]                                                                              ; |SoftCpu|_out_cell[4]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[5]                                                                              ; |SoftCpu|_out_cell[5]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[6]                                                                              ; |SoftCpu|_out_cell[6]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[7]                                                                              ; |SoftCpu|_out_cell[7]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[8]                                                                              ; |SoftCpu|_out_cell[8]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[9]                                                                              ; |SoftCpu|_out_cell[9]                                                                              ; padio            ;
+; |SoftCpu|_out_cell[10]                                                                             ; |SoftCpu|_out_cell[10]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[11]                                                                             ; |SoftCpu|_out_cell[11]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[12]                                                                             ; |SoftCpu|_out_cell[12]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[13]                                                                             ; |SoftCpu|_out_cell[13]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[14]                                                                             ; |SoftCpu|_out_cell[14]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[15]                                                                             ; |SoftCpu|_out_cell[15]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[16]                                                                             ; |SoftCpu|_out_cell[16]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[17]                                                                             ; |SoftCpu|_out_cell[17]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[18]                                                                             ; |SoftCpu|_out_cell[18]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[19]                                                                             ; |SoftCpu|_out_cell[19]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[20]                                                                             ; |SoftCpu|_out_cell[20]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[21]                                                                             ; |SoftCpu|_out_cell[21]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[22]                                                                             ; |SoftCpu|_out_cell[22]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[23]                                                                             ; |SoftCpu|_out_cell[23]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[24]                                                                             ; |SoftCpu|_out_cell[24]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[25]                                                                             ; |SoftCpu|_out_cell[25]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[26]                                                                             ; |SoftCpu|_out_cell[26]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[27]                                                                             ; |SoftCpu|_out_cell[27]                                                                             ; padio            ;
+; |SoftCpu|_out_cell[28]                                                                             ; |SoftCpu|_out_cell[28]                                                                             ; padio            ;
+; |SoftCpu|_out_ram[0]                                                                               ; |SoftCpu|_out_ram[0]                                                                               ; padio            ;
+; |SoftCpu|_out_ram[1]                                                                               ; |SoftCpu|_out_ram[1]                                                                               ; padio            ;
+; |SoftCpu|_out_ram[2]                                                                               ; |SoftCpu|_out_ram[2]                                                                               ; padio            ;
+; |SoftCpu|_out_ram[3]                                                                               ; |SoftCpu|_out_ram[3]                                                                               ; padio            ;
+; |SoftCpu|_out_ram[4]                                                                               ; |SoftCpu|_out_ram[4]                                                                               ; padio            ;
+; |SoftCpu|_out_ram[5]                                                                               ; |SoftCpu|_out_ram[5]                                                                               ; padio            ;
+; |SoftCpu|_out_ram[6]                                                                               ; |SoftCpu|_out_ram[6]                                                                               ; padio            ;
+; |SoftCpu|_out_ram[7]                                                                               ; |SoftCpu|_out_ram[7]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[0]                                                                               ; |SoftCpu|_out_alu[0]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[1]                                                                               ; |SoftCpu|_out_alu[1]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[2]                                                                               ; |SoftCpu|_out_alu[2]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[3]                                                                               ; |SoftCpu|_out_alu[3]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[4]                                                                               ; |SoftCpu|_out_alu[4]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[5]                                                                               ; |SoftCpu|_out_alu[5]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[6]                                                                               ; |SoftCpu|_out_alu[6]                                                                               ; padio            ;
+; |SoftCpu|_out_alu[7]                                                                               ; |SoftCpu|_out_alu[7]                                                                               ; padio            ;
+; |SoftCpu|_out_buf1[0]                                                                              ; |SoftCpu|_out_buf1[0]                                                                              ; padio            ;
+; |SoftCpu|_out_buf1[1]                                                                              ; |SoftCpu|_out_buf1[1]                                                                              ; padio            ;
+; |SoftCpu|_out_buf1[2]                                                                              ; |SoftCpu|_out_buf1[2]                                                                              ; padio            ;
+; |SoftCpu|_out_buf1[3]                                                                              ; |SoftCpu|_out_buf1[3]                                                                              ; padio            ;
+; |SoftCpu|_out_buf1[4]                                                                              ; |SoftCpu|_out_buf1[4]                                                                              ; padio            ;
+; |SoftCpu|_out_buf1[5]                                                                              ; |SoftCpu|_out_buf1[5]                                                                              ; padio            ;
+; |SoftCpu|_out_buf1[6]                                                                              ; |SoftCpu|_out_buf1[6]                                                                              ; padio            ;
+; |SoftCpu|_out_buf1[7]                                                                              ; |SoftCpu|_out_buf1[7]                                                                              ; padio            ;
+; |SoftCpu|_out_buf2[0]                                                                              ; |SoftCpu|_out_buf2[0]                                                                              ; padio            ;
+; |SoftCpu|_out_buf2[1]                                                                              ; |SoftCpu|_out_buf2[1]                                                                              ; padio            ;
+; |SoftCpu|_out_buf2[2]                                                                              ; |SoftCpu|_out_buf2[2]                                                                              ; padio            ;
+; |SoftCpu|_out_buf2[3]                                                                              ; |SoftCpu|_out_buf2[3]                                                                              ; padio            ;
+; |SoftCpu|_out_buf2[4]                                                                              ; |SoftCpu|_out_buf2[4]                                                                              ; padio            ;
+; |SoftCpu|_out_buf2[5]                                                                              ; |SoftCpu|_out_buf2[5]                                                                              ; padio            ;
+; |SoftCpu|clock                                                                                     ; |SoftCpu|clock~corein                                                                              ; combout          ;
+; |SoftCpu|clock~clkctrl                                                                             ; |SoftCpu|clock~clkctrl                                                                             ; outclk           ;
++----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                      ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                      ; Output Port Name                                                                          ; Output Port Type ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8 ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[29] ; portadataout15   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8 ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[30] ; portadataout16   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8 ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[31] ; portadataout17   ;
+; |SoftCpu|acum[0]                                                                               ; |SoftCpu|acum[0]                                                                          ; regout           ;
+; |SoftCpu|acum[1]                                                                               ; |SoftCpu|acum[1]                                                                          ; regout           ;
+; |SoftCpu|acum[2]                                                                               ; |SoftCpu|acum[2]                                                                          ; regout           ;
+; |SoftCpu|acum[3]                                                                               ; |SoftCpu|acum[3]                                                                          ; regout           ;
+; |SoftCpu|acum[4]                                                                               ; |SoftCpu|acum[4]                                                                          ; regout           ;
+; |SoftCpu|acum[5]                                                                               ; |SoftCpu|acum[5]                                                                          ; regout           ;
+; |SoftCpu|acum[6]                                                                               ; |SoftCpu|acum[6]                                                                          ; regout           ;
+; |SoftCpu|acum[7]                                                                               ; |SoftCpu|acum[7]                                                                          ; regout           ;
+; |SoftCpu|buf2[7]                                                                               ; |SoftCpu|buf2[7]                                                                          ; regout           ;
+; |SoftCpu|_~9622                                                                                ; |SoftCpu|_~9622                                                                           ; combout          ;
+; |SoftCpu|_~9623                                                                                ; |SoftCpu|_~9623                                                                           ; combout          ;
+; |SoftCpu|_~9624                                                                                ; |SoftCpu|_~9624                                                                           ; combout          ;
+; |SoftCpu|_~15                                                                                  ; |SoftCpu|_~15                                                                             ; combout          ;
+; |SoftCpu|write_acum_en~0                                                                       ; |SoftCpu|write_acum_en~0                                                                  ; combout          ;
+; |SoftCpu|acum[0]~713                                                                           ; |SoftCpu|acum[0]~713                                                                      ; combout          ;
+; |SoftCpu|_~73                                                                                  ; |SoftCpu|_~73                                                                             ; combout          ;
+; |SoftCpu|write_acum_en~2                                                                       ; |SoftCpu|write_acum_en~2                                                                  ; combout          ;
+; |SoftCpu|_~143                                                                                 ; |SoftCpu|_~143                                                                            ; combout          ;
+; |SoftCpu|acum[0]~714                                                                           ; |SoftCpu|acum[0]~714                                                                      ; combout          ;
+; |SoftCpu|write_acum_en~242                                                                     ; |SoftCpu|write_acum_en~242                                                                ; combout          ;
+; |SoftCpu|write_acum_en~244                                                                     ; |SoftCpu|write_acum_en~244                                                                ; combout          ;
+; |SoftCpu|acum[1]~715                                                                           ; |SoftCpu|acum[1]~715                                                                      ; combout          ;
+; |SoftCpu|acum[1]~716                                                                           ; |SoftCpu|acum[1]~716                                                                      ; combout          ;
+; |SoftCpu|acum[2]~717                                                                           ; |SoftCpu|acum[2]~717                                                                      ; combout          ;
+; |SoftCpu|acum[2]~718                                                                           ; |SoftCpu|acum[2]~718                                                                      ; combout          ;
+; |SoftCpu|acum[3]~719                                                                           ; |SoftCpu|acum[3]~719                                                                      ; combout          ;
+; |SoftCpu|acum[3]~720                                                                           ; |SoftCpu|acum[3]~720                                                                      ; combout          ;
+; |SoftCpu|acum[4]~721                                                                           ; |SoftCpu|acum[4]~721                                                                      ; combout          ;
+; |SoftCpu|acum[4]~722                                                                           ; |SoftCpu|acum[4]~722                                                                      ; combout          ;
+; |SoftCpu|acum[5]~723                                                                           ; |SoftCpu|acum[5]~723                                                                      ; combout          ;
+; |SoftCpu|acum[5]~724                                                                           ; |SoftCpu|acum[5]~724                                                                      ; combout          ;
+; |SoftCpu|acum[6]~725                                                                           ; |SoftCpu|acum[6]~725                                                                      ; combout          ;
+; |SoftCpu|acum[6]~726                                                                           ; |SoftCpu|acum[6]~726                                                                      ; combout          ;
+; |SoftCpu|acum[7]~727                                                                           ; |SoftCpu|acum[7]~727                                                                      ; combout          ;
+; |SoftCpu|acum[7]~728                                                                           ; |SoftCpu|acum[7]~728                                                                      ; combout          ;
+; |SoftCpu|_~286                                                                                 ; |SoftCpu|_~286                                                                            ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~911      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~911 ; combout          ;
+; |SoftCpu|op_7~104                                                                              ; |SoftCpu|op_7~104                                                                         ; combout          ;
+; |SoftCpu|op_7~105                                                                              ; |SoftCpu|op_7~105                                                                         ; combout          ;
+; |SoftCpu|op_7~106                                                                              ; |SoftCpu|op_7~106                                                                         ; combout          ;
+; |SoftCpu|_~9630                                                                                ; |SoftCpu|_~9630                                                                           ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~913      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~913 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~918      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~918 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~919      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~919 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~920      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~920 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~921      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~921 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~922      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~922 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~923      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~923 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~924      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~924 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~925      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~925 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~926      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~926 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~927      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~927 ; combout          ;
+; |SoftCpu|write_ram_en~0                                                                        ; |SoftCpu|write_ram_en~0                                                                   ; combout          ;
+; |SoftCpu|_~326                                                                                 ; |SoftCpu|_~326                                                                            ; combout          ;
+; |SoftCpu|_~9662                                                                                ; |SoftCpu|_~9662                                                                           ; combout          ;
+; |SoftCpu|_~9663                                                                                ; |SoftCpu|_~9663                                                                           ; combout          ;
+; |SoftCpu|_~9664                                                                                ; |SoftCpu|_~9664                                                                           ; combout          ;
+; |SoftCpu|_~9667                                                                                ; |SoftCpu|_~9667                                                                           ; combout          ;
+; |SoftCpu|_~9668                                                                                ; |SoftCpu|_~9668                                                                           ; combout          ;
+; |SoftCpu|_~9669                                                                                ; |SoftCpu|_~9669                                                                           ; combout          ;
+; |SoftCpu|_~9672                                                                                ; |SoftCpu|_~9672                                                                           ; combout          ;
+; |SoftCpu|_~9674                                                                                ; |SoftCpu|_~9674                                                                           ; combout          ;
+; |SoftCpu|_~9677                                                                                ; |SoftCpu|_~9677                                                                           ; combout          ;
+; |SoftCpu|buf3[7]                                                                               ; |SoftCpu|buf3[7]                                                                          ; regout           ;
+; |SoftCpu|_~9678                                                                                ; |SoftCpu|_~9678                                                                           ; combout          ;
+; |SoftCpu|_~9679                                                                                ; |SoftCpu|_~9679                                                                           ; combout          ;
+; |SoftCpu|_~9682                                                                                ; |SoftCpu|_~9682                                                                           ; combout          ;
+; |SoftCpu|_~9685                                                                                ; |SoftCpu|_~9685                                                                           ; combout          ;
+; |SoftCpu|_~9688                                                                                ; |SoftCpu|_~9688                                                                           ; combout          ;
+; |SoftCpu|_~9691                                                                                ; |SoftCpu|_~9691                                                                           ; combout          ;
+; |SoftCpu|_~9694                                                                                ; |SoftCpu|_~9694                                                                           ; combout          ;
+; |SoftCpu|_~9696                                                                                ; |SoftCpu|_~9696                                                                           ; combout          ;
+; |SoftCpu|_~9697                                                                                ; |SoftCpu|_~9697                                                                           ; combout          ;
+; |SoftCpu|_~9700                                                                                ; |SoftCpu|_~9700                                                                           ; combout          ;
+; |SoftCpu|calc_alu_en~0                                                                         ; |SoftCpu|calc_alu_en~0                                                                    ; combout          ;
+; |SoftCpu|_~9702                                                                                ; |SoftCpu|_~9702                                                                           ; combout          ;
+; |SoftCpu|calc_alu_en~264                                                                       ; |SoftCpu|calc_alu_en~264                                                                  ; combout          ;
+; |SoftCpu|_~9709                                                                                ; |SoftCpu|_~9709                                                                           ; combout          ;
+; |SoftCpu|_~655                                                                                 ; |SoftCpu|_~655                                                                            ; combout          ;
+; |SoftCpu|_~9713                                                                                ; |SoftCpu|_~9713                                                                           ; combout          ;
+; |SoftCpu|_~654                                                                                 ; |SoftCpu|_~654                                                                            ; combout          ;
+; |SoftCpu|_~9717                                                                                ; |SoftCpu|_~9717                                                                           ; combout          ;
+; |SoftCpu|_~653                                                                                 ; |SoftCpu|_~653                                                                            ; combout          ;
+; |SoftCpu|_~9721                                                                                ; |SoftCpu|_~9721                                                                           ; combout          ;
+; |SoftCpu|_~652                                                                                 ; |SoftCpu|_~652                                                                            ; combout          ;
+; |SoftCpu|_~9725                                                                                ; |SoftCpu|_~9725                                                                           ; combout          ;
+; |SoftCpu|_~651                                                                                 ; |SoftCpu|_~651                                                                            ; combout          ;
+; |SoftCpu|_~9729                                                                                ; |SoftCpu|_~9729                                                                           ; combout          ;
+; |SoftCpu|_~650                                                                                 ; |SoftCpu|_~650                                                                            ; combout          ;
+; |SoftCpu|_~9733                                                                                ; |SoftCpu|_~9733                                                                           ; combout          ;
+; |SoftCpu|_~649                                                                                 ; |SoftCpu|_~649                                                                            ; combout          ;
+; |SoftCpu|_~9735                                                                                ; |SoftCpu|_~9735                                                                           ; combout          ;
+; |SoftCpu|_~9736                                                                                ; |SoftCpu|_~9736                                                                           ; combout          ;
+; |SoftCpu|_out_buf2_ena~68                                                                      ; |SoftCpu|_out_buf2_ena~68                                                                 ; combout          ;
+; |SoftCpu|_~713                                                                                 ; |SoftCpu|_~713                                                                            ; combout          ;
+; |SoftCpu|calc_alu_en~265                                                                       ; |SoftCpu|calc_alu_en~265                                                                  ; combout          ;
+; |SoftCpu|~GND                                                                                  ; |SoftCpu|~GND                                                                             ; combout          ;
+; |SoftCpu|_out_acum[0]                                                                          ; |SoftCpu|_out_acum[0]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[1]                                                                          ; |SoftCpu|_out_acum[1]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[2]                                                                          ; |SoftCpu|_out_acum[2]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[3]                                                                          ; |SoftCpu|_out_acum[3]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[4]                                                                          ; |SoftCpu|_out_acum[4]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[5]                                                                          ; |SoftCpu|_out_acum[5]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[6]                                                                          ; |SoftCpu|_out_acum[6]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[7]                                                                          ; |SoftCpu|_out_acum[7]                                                                     ; padio            ;
+; |SoftCpu|_out_command[5]                                                                       ; |SoftCpu|_out_command[5]                                                                  ; padio            ;
+; |SoftCpu|_out_command[6]                                                                       ; |SoftCpu|_out_command[6]                                                                  ; padio            ;
+; |SoftCpu|_out_command[7]                                                                       ; |SoftCpu|_out_command[7]                                                                  ; padio            ;
+; |SoftCpu|_out_cell[29]                                                                         ; |SoftCpu|_out_cell[29]                                                                    ; padio            ;
+; |SoftCpu|_out_cell[30]                                                                         ; |SoftCpu|_out_cell[30]                                                                    ; padio            ;
+; |SoftCpu|_out_cell[31]                                                                         ; |SoftCpu|_out_cell[31]                                                                    ; padio            ;
+; |SoftCpu|_out_buf2[7]                                                                          ; |SoftCpu|_out_buf2[7]                                                                     ; padio            ;
+; |SoftCpu|_out_buf2_ena                                                                         ; |SoftCpu|_out_buf2_ena                                                                    ; padio            ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                      ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                      ; Output Port Name                                                                          ; Output Port Type ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]          ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|safe_q[7]                ; regout           ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8 ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[29] ; portadataout15   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8 ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[30] ; portadataout16   ;
+; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|ram_block1a8 ; |SoftCpu|rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[31] ; portadataout17   ;
+; |SoftCpu|acum[0]                                                                               ; |SoftCpu|acum[0]                                                                          ; regout           ;
+; |SoftCpu|acum[1]                                                                               ; |SoftCpu|acum[1]                                                                          ; regout           ;
+; |SoftCpu|acum[2]                                                                               ; |SoftCpu|acum[2]                                                                          ; regout           ;
+; |SoftCpu|acum[3]                                                                               ; |SoftCpu|acum[3]                                                                          ; regout           ;
+; |SoftCpu|acum[4]                                                                               ; |SoftCpu|acum[4]                                                                          ; regout           ;
+; |SoftCpu|acum[5]                                                                               ; |SoftCpu|acum[5]                                                                          ; regout           ;
+; |SoftCpu|acum[6]                                                                               ; |SoftCpu|acum[6]                                                                          ; regout           ;
+; |SoftCpu|acum[7]                                                                               ; |SoftCpu|acum[7]                                                                          ; regout           ;
+; |SoftCpu|buf2[6]                                                                               ; |SoftCpu|buf2[6]                                                                          ; regout           ;
+; |SoftCpu|buf2[7]                                                                               ; |SoftCpu|buf2[7]                                                                          ; regout           ;
+; |SoftCpu|_~9622                                                                                ; |SoftCpu|_~9622                                                                           ; combout          ;
+; |SoftCpu|_~9623                                                                                ; |SoftCpu|_~9623                                                                           ; combout          ;
+; |SoftCpu|_~9624                                                                                ; |SoftCpu|_~9624                                                                           ; combout          ;
+; |SoftCpu|_~15                                                                                  ; |SoftCpu|_~15                                                                             ; combout          ;
+; |SoftCpu|write_acum_en~0                                                                       ; |SoftCpu|write_acum_en~0                                                                  ; combout          ;
+; |SoftCpu|acum[0]~713                                                                           ; |SoftCpu|acum[0]~713                                                                      ; combout          ;
+; |SoftCpu|_~73                                                                                  ; |SoftCpu|_~73                                                                             ; combout          ;
+; |SoftCpu|write_acum_en~2                                                                       ; |SoftCpu|write_acum_en~2                                                                  ; combout          ;
+; |SoftCpu|_~143                                                                                 ; |SoftCpu|_~143                                                                            ; combout          ;
+; |SoftCpu|acum[0]~714                                                                           ; |SoftCpu|acum[0]~714                                                                      ; combout          ;
+; |SoftCpu|write_acum_en~242                                                                     ; |SoftCpu|write_acum_en~242                                                                ; combout          ;
+; |SoftCpu|write_acum_en~244                                                                     ; |SoftCpu|write_acum_en~244                                                                ; combout          ;
+; |SoftCpu|acum[1]~715                                                                           ; |SoftCpu|acum[1]~715                                                                      ; combout          ;
+; |SoftCpu|acum[1]~716                                                                           ; |SoftCpu|acum[1]~716                                                                      ; combout          ;
+; |SoftCpu|acum[2]~717                                                                           ; |SoftCpu|acum[2]~717                                                                      ; combout          ;
+; |SoftCpu|acum[2]~718                                                                           ; |SoftCpu|acum[2]~718                                                                      ; combout          ;
+; |SoftCpu|acum[3]~719                                                                           ; |SoftCpu|acum[3]~719                                                                      ; combout          ;
+; |SoftCpu|acum[3]~720                                                                           ; |SoftCpu|acum[3]~720                                                                      ; combout          ;
+; |SoftCpu|acum[4]~721                                                                           ; |SoftCpu|acum[4]~721                                                                      ; combout          ;
+; |SoftCpu|acum[4]~722                                                                           ; |SoftCpu|acum[4]~722                                                                      ; combout          ;
+; |SoftCpu|acum[5]~723                                                                           ; |SoftCpu|acum[5]~723                                                                      ; combout          ;
+; |SoftCpu|acum[5]~724                                                                           ; |SoftCpu|acum[5]~724                                                                      ; combout          ;
+; |SoftCpu|acum[6]~725                                                                           ; |SoftCpu|acum[6]~725                                                                      ; combout          ;
+; |SoftCpu|acum[6]~726                                                                           ; |SoftCpu|acum[6]~726                                                                      ; combout          ;
+; |SoftCpu|acum[7]~727                                                                           ; |SoftCpu|acum[7]~727                                                                      ; combout          ;
+; |SoftCpu|acum[7]~728                                                                           ; |SoftCpu|acum[7]~728                                                                      ; combout          ;
+; |SoftCpu|_~286                                                                                 ; |SoftCpu|_~286                                                                            ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~911      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~911 ; combout          ;
+; |SoftCpu|op_7~104                                                                              ; |SoftCpu|op_7~104                                                                         ; combout          ;
+; |SoftCpu|op_7~105                                                                              ; |SoftCpu|op_7~105                                                                         ; combout          ;
+; |SoftCpu|op_7~106                                                                              ; |SoftCpu|op_7~106                                                                         ; combout          ;
+; |SoftCpu|_~9630                                                                                ; |SoftCpu|_~9630                                                                           ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~913      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[0]~913 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~918      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~918 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~919      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[3]~919 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~920      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~920 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~921      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[4]~921 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~922      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~922 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~923      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[5]~923 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~924      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~924 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~925      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[6]~925 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~926      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~926 ; combout          ;
+; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~927      ; |SoftCpu|lpm_counter:instruction_counter|cntr_qvh:auto_generated|counter_reg_bit1a[7]~927 ; combout          ;
+; |SoftCpu|write_ram_en~0                                                                        ; |SoftCpu|write_ram_en~0                                                                   ; combout          ;
+; |SoftCpu|_~326                                                                                 ; |SoftCpu|_~326                                                                            ; combout          ;
+; |SoftCpu|_~9662                                                                                ; |SoftCpu|_~9662                                                                           ; combout          ;
+; |SoftCpu|_~9663                                                                                ; |SoftCpu|_~9663                                                                           ; combout          ;
+; |SoftCpu|_~9664                                                                                ; |SoftCpu|_~9664                                                                           ; combout          ;
+; |SoftCpu|_~9667                                                                                ; |SoftCpu|_~9667                                                                           ; combout          ;
+; |SoftCpu|_~9668                                                                                ; |SoftCpu|_~9668                                                                           ; combout          ;
+; |SoftCpu|_~9669                                                                                ; |SoftCpu|_~9669                                                                           ; combout          ;
+; |SoftCpu|_~9672                                                                                ; |SoftCpu|_~9672                                                                           ; combout          ;
+; |SoftCpu|_~9674                                                                                ; |SoftCpu|_~9674                                                                           ; combout          ;
+; |SoftCpu|_~9677                                                                                ; |SoftCpu|_~9677                                                                           ; combout          ;
+; |SoftCpu|buf3[7]                                                                               ; |SoftCpu|buf3[7]                                                                          ; regout           ;
+; |SoftCpu|_~9678                                                                                ; |SoftCpu|_~9678                                                                           ; combout          ;
+; |SoftCpu|_~9679                                                                                ; |SoftCpu|_~9679                                                                           ; combout          ;
+; |SoftCpu|_~9682                                                                                ; |SoftCpu|_~9682                                                                           ; combout          ;
+; |SoftCpu|_~9685                                                                                ; |SoftCpu|_~9685                                                                           ; combout          ;
+; |SoftCpu|_~9688                                                                                ; |SoftCpu|_~9688                                                                           ; combout          ;
+; |SoftCpu|_~9691                                                                                ; |SoftCpu|_~9691                                                                           ; combout          ;
+; |SoftCpu|_~9694                                                                                ; |SoftCpu|_~9694                                                                           ; combout          ;
+; |SoftCpu|_~9696                                                                                ; |SoftCpu|_~9696                                                                           ; combout          ;
+; |SoftCpu|_~9697                                                                                ; |SoftCpu|_~9697                                                                           ; combout          ;
+; |SoftCpu|_~9700                                                                                ; |SoftCpu|_~9700                                                                           ; combout          ;
+; |SoftCpu|calc_alu_en~0                                                                         ; |SoftCpu|calc_alu_en~0                                                                    ; combout          ;
+; |SoftCpu|_~9702                                                                                ; |SoftCpu|_~9702                                                                           ; combout          ;
+; |SoftCpu|calc_alu_en~264                                                                       ; |SoftCpu|calc_alu_en~264                                                                  ; combout          ;
+; |SoftCpu|_~9709                                                                                ; |SoftCpu|_~9709                                                                           ; combout          ;
+; |SoftCpu|_~655                                                                                 ; |SoftCpu|_~655                                                                            ; combout          ;
+; |SoftCpu|_~9713                                                                                ; |SoftCpu|_~9713                                                                           ; combout          ;
+; |SoftCpu|_~654                                                                                 ; |SoftCpu|_~654                                                                            ; combout          ;
+; |SoftCpu|_~9717                                                                                ; |SoftCpu|_~9717                                                                           ; combout          ;
+; |SoftCpu|_~653                                                                                 ; |SoftCpu|_~653                                                                            ; combout          ;
+; |SoftCpu|_~9721                                                                                ; |SoftCpu|_~9721                                                                           ; combout          ;
+; |SoftCpu|_~652                                                                                 ; |SoftCpu|_~652                                                                            ; combout          ;
+; |SoftCpu|_~9725                                                                                ; |SoftCpu|_~9725                                                                           ; combout          ;
+; |SoftCpu|_~651                                                                                 ; |SoftCpu|_~651                                                                            ; combout          ;
+; |SoftCpu|_~9729                                                                                ; |SoftCpu|_~9729                                                                           ; combout          ;
+; |SoftCpu|_~650                                                                                 ; |SoftCpu|_~650                                                                            ; combout          ;
+; |SoftCpu|_~9733                                                                                ; |SoftCpu|_~9733                                                                           ; combout          ;
+; |SoftCpu|buf4[7]                                                                               ; |SoftCpu|buf4[7]                                                                          ; regout           ;
+; |SoftCpu|_~649                                                                                 ; |SoftCpu|_~649                                                                            ; combout          ;
+; |SoftCpu|_~9735                                                                                ; |SoftCpu|_~9735                                                                           ; combout          ;
+; |SoftCpu|_~9736                                                                                ; |SoftCpu|_~9736                                                                           ; combout          ;
+; |SoftCpu|_out_buf2_ena~68                                                                      ; |SoftCpu|_out_buf2_ena~68                                                                 ; combout          ;
+; |SoftCpu|_~713                                                                                 ; |SoftCpu|_~713                                                                            ; combout          ;
+; |SoftCpu|calc_alu_en~265                                                                       ; |SoftCpu|calc_alu_en~265                                                                  ; combout          ;
+; |SoftCpu|~GND                                                                                  ; |SoftCpu|~GND                                                                             ; combout          ;
+; |SoftCpu|_out_acum[0]                                                                          ; |SoftCpu|_out_acum[0]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[1]                                                                          ; |SoftCpu|_out_acum[1]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[2]                                                                          ; |SoftCpu|_out_acum[2]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[3]                                                                          ; |SoftCpu|_out_acum[3]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[4]                                                                          ; |SoftCpu|_out_acum[4]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[5]                                                                          ; |SoftCpu|_out_acum[5]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[6]                                                                          ; |SoftCpu|_out_acum[6]                                                                     ; padio            ;
+; |SoftCpu|_out_acum[7]                                                                          ; |SoftCpu|_out_acum[7]                                                                     ; padio            ;
+; |SoftCpu|_out_instruction_counter[7]                                                           ; |SoftCpu|_out_instruction_counter[7]                                                      ; padio            ;
+; |SoftCpu|_out_command[5]                                                                       ; |SoftCpu|_out_command[5]                                                                  ; padio            ;
+; |SoftCpu|_out_command[6]                                                                       ; |SoftCpu|_out_command[6]                                                                  ; padio            ;
+; |SoftCpu|_out_command[7]                                                                       ; |SoftCpu|_out_command[7]                                                                  ; padio            ;
+; |SoftCpu|_out_cell[29]                                                                         ; |SoftCpu|_out_cell[29]                                                                    ; padio            ;
+; |SoftCpu|_out_cell[30]                                                                         ; |SoftCpu|_out_cell[30]                                                                    ; padio            ;
+; |SoftCpu|_out_cell[31]                                                                         ; |SoftCpu|_out_cell[31]                                                                    ; padio            ;
+; |SoftCpu|_out_buf2[6]                                                                          ; |SoftCpu|_out_buf2[6]                                                                     ; padio            ;
+; |SoftCpu|_out_buf2[7]                                                                          ; |SoftCpu|_out_buf2[7]                                                                     ; padio            ;
+; |SoftCpu|_out_buf2_ena                                                                         ; |SoftCpu|_out_buf2_ena                                                                    ; padio            ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Thu Jan 26 14:44:33 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off SoftCpu -c SoftCpu
+Info: Using vector source file "D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      75.90 %
+Info: Number of transitions in simulation is 128630
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 171 megabytes
+    Info: Processing ended: Thu Jan 26 14:44:35 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

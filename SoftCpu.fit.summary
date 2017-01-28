@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Jan 26 14:44:17 2017
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : SoftCpu
+Top-level Entity Name : SoftCpu
+Family : Cyclone II
+Device : EP2C20F256C7
+Timing Models : Final
+Total logic elements : 254 / 18,752 ( 1 % )
+    Total combinational functions : 254 / 18,752 ( 1 % )
+    Dedicated logic registers : 69 / 18,752 ( < 1 % )
+Total registers : 69
+Total pins : 119 / 152 ( 78 % )
+Total virtual pins : 0
+Total memory bits : 10,240 / 239,616 ( 4 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

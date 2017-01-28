@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jan 26 14:44:09 2017
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : SoftCpu
+Top-level Entity Name : SoftCpu
+Family : Cyclone II
+Total logic elements : 254
+    Total combinational functions : 254
+    Dedicated logic registers : 69
+Total registers : 69
+Total pins : 119
+Total virtual pins : 0
+Total memory bits : 10,240
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

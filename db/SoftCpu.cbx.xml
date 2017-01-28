@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SoftCpu">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoftCpu|alu8:alu|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_g1j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoftCpu|ram8:ram|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_gra1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoftCpu|lpm_counter:instruction_counter" CBX_FILE_NAME="cntr_qvh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoftCpu|lpm_counter:stage_counter" CBX_FILE_NAME="cntr_r8h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoftCpu|rom32:rom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1371.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

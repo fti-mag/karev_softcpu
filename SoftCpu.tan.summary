@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.094 ns
+From           : rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[25]
+To             : _out_buf2_ena
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 109.49 MHz ( period = 9.133 ns )
+From           : rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[27]
+To             : ram8:ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg7
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

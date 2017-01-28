@@ -1,0 +1,1138 @@
+TimeQuest Timing Analyzer report for SoftCpu
+Mon Jan 23 21:19:02 2017
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow Model Fmax Summary
+  5. Slow Model Setup Summary
+  6. Slow Model Hold Summary
+  7. Slow Model Recovery Summary
+  8. Slow Model Removal Summary
+  9. Slow Model Minimum Pulse Width
+ 10. Clock to Output Times
+ 11. Minimum Clock to Output Times
+ 12. Fast Model Setup Summary
+ 13. Fast Model Hold Summary
+ 14. Fast Model Recovery Summary
+ 15. Fast Model Removal Summary
+ 16. Fast Model Minimum Pulse Width
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Multicorner Timing Analysis Summary
+ 20. Setup Transfers
+ 21. Hold Transfers
+ 22. Report TCCS
+ 23. Report RSKM
+ 24. Unconstrained Paths
+ 25. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name      ; SoftCpu                                          ;
+; Device Family      ; Cyclone II                                       ;
+; Device Name        ; EP2C20F256C7                                     ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 136.63 MHz ; 136.63 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -6.319 ; -413.891      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.625 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width                                                                                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------------------------------------+
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[0]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[0]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[1]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[1]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[2]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[2]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[3]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[3]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[4]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[4]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[5]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[5]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[6]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[6]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[7]                          ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[7]                          ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[0]                         ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[0]                         ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[10]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[10]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[11]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[11]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[12]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[12]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[13]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[13]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[14]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[14]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[15]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[15]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[16]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[16]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[17]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[17]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[18]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[18]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[19]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[19]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[1]                         ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[1]                         ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[20]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[20]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[21]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[21]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[22]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[22]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[23]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[23]                        ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[24]                        ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[24]                        ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                      ;
++------------------------------+------------+--------+--------+------------+-----------------+
+; Data Port                    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------------------+------------+--------+--------+------------+-----------------+
+; _out_acum[*]                 ; clock      ; 9.917  ; 9.917  ; Rise       ; clock           ;
+;  _out_acum[0]                ; clock      ; 8.337  ; 8.337  ; Rise       ; clock           ;
+;  _out_acum[1]                ; clock      ; 9.917  ; 9.917  ; Rise       ; clock           ;
+;  _out_acum[2]                ; clock      ; 8.009  ; 8.009  ; Rise       ; clock           ;
+;  _out_acum[3]                ; clock      ; 8.110  ; 8.110  ; Rise       ; clock           ;
+;  _out_acum[4]                ; clock      ; 8.504  ; 8.504  ; Rise       ; clock           ;
+;  _out_acum[5]                ; clock      ; 8.119  ; 8.119  ; Rise       ; clock           ;
+;  _out_acum[6]                ; clock      ; 8.891  ; 8.891  ; Rise       ; clock           ;
+;  _out_acum[7]                ; clock      ; 8.022  ; 8.022  ; Rise       ; clock           ;
+; _out_alu[*]                  ; clock      ; 9.563  ; 9.563  ; Rise       ; clock           ;
+;  _out_alu[0]                 ; clock      ; 8.008  ; 8.008  ; Rise       ; clock           ;
+;  _out_alu[1]                 ; clock      ; 8.301  ; 8.301  ; Rise       ; clock           ;
+;  _out_alu[2]                 ; clock      ; 7.887  ; 7.887  ; Rise       ; clock           ;
+;  _out_alu[3]                 ; clock      ; 8.263  ; 8.263  ; Rise       ; clock           ;
+;  _out_alu[4]                 ; clock      ; 9.150  ; 9.150  ; Rise       ; clock           ;
+;  _out_alu[5]                 ; clock      ; 9.563  ; 9.563  ; Rise       ; clock           ;
+;  _out_alu[6]                 ; clock      ; 7.887  ; 7.887  ; Rise       ; clock           ;
+;  _out_alu[7]                 ; clock      ; 8.834  ; 8.834  ; Rise       ; clock           ;
+; _out_argument1[*]            ; clock      ; 10.014 ; 10.014 ; Rise       ; clock           ;
+;  _out_argument1[0]           ; clock      ; 8.941  ; 8.941  ; Rise       ; clock           ;
+;  _out_argument1[1]           ; clock      ; 8.160  ; 8.160  ; Rise       ; clock           ;
+;  _out_argument1[2]           ; clock      ; 9.299  ; 9.299  ; Rise       ; clock           ;
+;  _out_argument1[3]           ; clock      ; 9.914  ; 9.914  ; Rise       ; clock           ;
+;  _out_argument1[4]           ; clock      ; 8.850  ; 8.850  ; Rise       ; clock           ;
+;  _out_argument1[5]           ; clock      ; 8.900  ; 8.900  ; Rise       ; clock           ;
+;  _out_argument1[6]           ; clock      ; 7.897  ; 7.897  ; Rise       ; clock           ;
+;  _out_argument1[7]           ; clock      ; 10.014 ; 10.014 ; Rise       ; clock           ;
+; _out_argument2[*]            ; clock      ; 10.727 ; 10.727 ; Rise       ; clock           ;
+;  _out_argument2[0]           ; clock      ; 8.578  ; 8.578  ; Rise       ; clock           ;
+;  _out_argument2[1]           ; clock      ; 9.242  ; 9.242  ; Rise       ; clock           ;
+;  _out_argument2[2]           ; clock      ; 8.751  ; 8.751  ; Rise       ; clock           ;
+;  _out_argument2[3]           ; clock      ; 8.334  ; 8.334  ; Rise       ; clock           ;
+;  _out_argument2[4]           ; clock      ; 9.263  ; 9.263  ; Rise       ; clock           ;
+;  _out_argument2[5]           ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_argument2[6]           ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_argument2[7]           ; clock      ; 10.727 ; 10.727 ; Rise       ; clock           ;
+; _out_argument3[*]            ; clock      ; 11.056 ; 11.056 ; Rise       ; clock           ;
+;  _out_argument3[0]           ; clock      ; 8.477  ; 8.477  ; Rise       ; clock           ;
+;  _out_argument3[1]           ; clock      ; 9.627  ; 9.627  ; Rise       ; clock           ;
+;  _out_argument3[2]           ; clock      ; 9.031  ; 9.031  ; Rise       ; clock           ;
+;  _out_argument3[3]           ; clock      ; 11.056 ; 11.056 ; Rise       ; clock           ;
+;  _out_argument3[4]           ; clock      ; 9.646  ; 9.646  ; Rise       ; clock           ;
+;  _out_argument3[5]           ; clock      ; 8.810  ; 8.810  ; Rise       ; clock           ;
+;  _out_argument3[6]           ; clock      ; 8.153  ; 8.153  ; Rise       ; clock           ;
+;  _out_argument3[7]           ; clock      ; 10.822 ; 10.822 ; Rise       ; clock           ;
+; _out_buf1[*]                 ; clock      ; 9.968  ; 9.968  ; Rise       ; clock           ;
+;  _out_buf1[0]                ; clock      ; 8.232  ; 8.232  ; Rise       ; clock           ;
+;  _out_buf1[1]                ; clock      ; 8.662  ; 8.662  ; Rise       ; clock           ;
+;  _out_buf1[2]                ; clock      ; 7.951  ; 7.951  ; Rise       ; clock           ;
+;  _out_buf1[3]                ; clock      ; 9.968  ; 9.968  ; Rise       ; clock           ;
+;  _out_buf1[4]                ; clock      ; 8.615  ; 8.615  ; Rise       ; clock           ;
+;  _out_buf1[5]                ; clock      ; 9.464  ; 9.464  ; Rise       ; clock           ;
+;  _out_buf1[6]                ; clock      ; 7.855  ; 7.855  ; Rise       ; clock           ;
+;  _out_buf1[7]                ; clock      ; 8.676  ; 8.676  ; Rise       ; clock           ;
+; _out_buf2[*]                 ; clock      ; 9.435  ; 9.435  ; Rise       ; clock           ;
+;  _out_buf2[0]                ; clock      ; 8.767  ; 8.767  ; Rise       ; clock           ;
+;  _out_buf2[1]                ; clock      ; 9.435  ; 9.435  ; Rise       ; clock           ;
+;  _out_buf2[2]                ; clock      ; 8.841  ; 8.841  ; Rise       ; clock           ;
+;  _out_buf2[3]                ; clock      ; 8.994  ; 8.994  ; Rise       ; clock           ;
+;  _out_buf2[4]                ; clock      ; 8.551  ; 8.551  ; Rise       ; clock           ;
+;  _out_buf2[5]                ; clock      ; 8.185  ; 8.185  ; Rise       ; clock           ;
+;  _out_buf2[6]                ; clock      ; 8.829  ; 8.829  ; Rise       ; clock           ;
+;  _out_buf2[7]                ; clock      ; 8.235  ; 8.235  ; Rise       ; clock           ;
+; _out_buf2_ena                ; clock      ; 11.375 ; 11.375 ; Rise       ; clock           ;
+; _out_cell[*]                 ; clock      ; 11.763 ; 11.763 ; Rise       ; clock           ;
+;  _out_cell[0]                ; clock      ; 8.477  ; 8.477  ; Rise       ; clock           ;
+;  _out_cell[1]                ; clock      ; 9.627  ; 9.627  ; Rise       ; clock           ;
+;  _out_cell[2]                ; clock      ; 9.031  ; 9.031  ; Rise       ; clock           ;
+;  _out_cell[3]                ; clock      ; 11.056 ; 11.056 ; Rise       ; clock           ;
+;  _out_cell[4]                ; clock      ; 9.646  ; 9.646  ; Rise       ; clock           ;
+;  _out_cell[5]                ; clock      ; 8.411  ; 8.411  ; Rise       ; clock           ;
+;  _out_cell[6]                ; clock      ; 8.153  ; 8.153  ; Rise       ; clock           ;
+;  _out_cell[7]                ; clock      ; 10.812 ; 10.812 ; Rise       ; clock           ;
+;  _out_cell[8]                ; clock      ; 8.578  ; 8.578  ; Rise       ; clock           ;
+;  _out_cell[9]                ; clock      ; 9.252  ; 9.252  ; Rise       ; clock           ;
+;  _out_cell[10]               ; clock      ; 8.751  ; 8.751  ; Rise       ; clock           ;
+;  _out_cell[11]               ; clock      ; 8.334  ; 8.334  ; Rise       ; clock           ;
+;  _out_cell[12]               ; clock      ; 9.263  ; 9.263  ; Rise       ; clock           ;
+;  _out_cell[13]               ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_cell[14]               ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_cell[15]               ; clock      ; 10.727 ; 10.727 ; Rise       ; clock           ;
+;  _out_cell[16]               ; clock      ; 8.941  ; 8.941  ; Rise       ; clock           ;
+;  _out_cell[17]               ; clock      ; 8.160  ; 8.160  ; Rise       ; clock           ;
+;  _out_cell[18]               ; clock      ; 9.309  ; 9.309  ; Rise       ; clock           ;
+;  _out_cell[19]               ; clock      ; 9.901  ; 9.901  ; Rise       ; clock           ;
+;  _out_cell[20]               ; clock      ; 8.839  ; 8.839  ; Rise       ; clock           ;
+;  _out_cell[21]               ; clock      ; 8.900  ; 8.900  ; Rise       ; clock           ;
+;  _out_cell[22]               ; clock      ; 8.052  ; 8.052  ; Rise       ; clock           ;
+;  _out_cell[23]               ; clock      ; 9.441  ; 9.441  ; Rise       ; clock           ;
+;  _out_cell[24]               ; clock      ; 11.763 ; 11.763 ; Rise       ; clock           ;
+;  _out_cell[25]               ; clock      ; 8.914  ; 8.914  ; Rise       ; clock           ;
+;  _out_cell[26]               ; clock      ; 10.074 ; 10.074 ; Rise       ; clock           ;
+;  _out_cell[27]               ; clock      ; 9.941  ; 9.941  ; Rise       ; clock           ;
+;  _out_cell[28]               ; clock      ; 9.304  ; 9.304  ; Rise       ; clock           ;
+;  _out_cell[29]               ; clock      ; 9.250  ; 9.250  ; Rise       ; clock           ;
+;  _out_cell[30]               ; clock      ; 8.611  ; 8.611  ; Rise       ; clock           ;
+;  _out_cell[31]               ; clock      ; 8.565  ; 8.565  ; Rise       ; clock           ;
+; _out_command[*]              ; clock      ; 11.761 ; 11.761 ; Rise       ; clock           ;
+;  _out_command[0]             ; clock      ; 11.761 ; 11.761 ; Rise       ; clock           ;
+;  _out_command[1]             ; clock      ; 8.914  ; 8.914  ; Rise       ; clock           ;
+;  _out_command[2]             ; clock      ; 10.074 ; 10.074 ; Rise       ; clock           ;
+;  _out_command[3]             ; clock      ; 9.941  ; 9.941  ; Rise       ; clock           ;
+;  _out_command[4]             ; clock      ; 9.294  ; 9.294  ; Rise       ; clock           ;
+;  _out_command[5]             ; clock      ; 9.257  ; 9.257  ; Rise       ; clock           ;
+;  _out_command[6]             ; clock      ; 8.905  ; 8.905  ; Rise       ; clock           ;
+;  _out_command[7]             ; clock      ; 8.565  ; 8.565  ; Rise       ; clock           ;
+; _out_instruction_counter[*]  ; clock      ; 8.254  ; 8.254  ; Rise       ; clock           ;
+;  _out_instruction_counter[0] ; clock      ; 7.362  ; 7.362  ; Rise       ; clock           ;
+;  _out_instruction_counter[1] ; clock      ; 7.991  ; 7.991  ; Rise       ; clock           ;
+;  _out_instruction_counter[2] ; clock      ; 8.254  ; 8.254  ; Rise       ; clock           ;
+;  _out_instruction_counter[3] ; clock      ; 8.036  ; 8.036  ; Rise       ; clock           ;
+;  _out_instruction_counter[4] ; clock      ; 7.379  ; 7.379  ; Rise       ; clock           ;
+;  _out_instruction_counter[5] ; clock      ; 7.909  ; 7.909  ; Rise       ; clock           ;
+;  _out_instruction_counter[6] ; clock      ; 7.912  ; 7.912  ; Rise       ; clock           ;
+;  _out_instruction_counter[7] ; clock      ; 7.947  ; 7.947  ; Rise       ; clock           ;
+; _out_ram[*]                  ; clock      ; 10.679 ; 10.679 ; Rise       ; clock           ;
+;  _out_ram[0]                 ; clock      ; 7.356  ; 7.356  ; Rise       ; clock           ;
+;  _out_ram[1]                 ; clock      ; 7.692  ; 7.692  ; Rise       ; clock           ;
+;  _out_ram[2]                 ; clock      ; 7.743  ; 7.743  ; Rise       ; clock           ;
+;  _out_ram[3]                 ; clock      ; 7.722  ; 7.722  ; Rise       ; clock           ;
+;  _out_ram[4]                 ; clock      ; 7.677  ; 7.677  ; Rise       ; clock           ;
+;  _out_ram[5]                 ; clock      ; 10.679 ; 10.679 ; Rise       ; clock           ;
+;  _out_ram[6]                 ; clock      ; 8.137  ; 8.137  ; Rise       ; clock           ;
+;  _out_ram[7]                 ; clock      ; 8.063  ; 8.063  ; Rise       ; clock           ;
+; _out_stage_counter[*]        ; clock      ; 9.171  ; 9.171  ; Rise       ; clock           ;
+;  _out_stage_counter[0]       ; clock      ; 8.642  ; 8.642  ; Rise       ; clock           ;
+;  _out_stage_counter[1]       ; clock      ; 8.358  ; 8.358  ; Rise       ; clock           ;
+;  _out_stage_counter[2]       ; clock      ; 9.171  ; 9.171  ; Rise       ; clock           ;
+;  _out_stage_counter[3]       ; clock      ; 8.240  ; 8.240  ; Rise       ; clock           ;
++------------------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                              ;
++------------------------------+------------+--------+--------+------------+-----------------+
+; Data Port                    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------------------+------------+--------+--------+------------+-----------------+
+; _out_acum[*]                 ; clock      ; 8.009  ; 8.009  ; Rise       ; clock           ;
+;  _out_acum[0]                ; clock      ; 8.337  ; 8.337  ; Rise       ; clock           ;
+;  _out_acum[1]                ; clock      ; 9.917  ; 9.917  ; Rise       ; clock           ;
+;  _out_acum[2]                ; clock      ; 8.009  ; 8.009  ; Rise       ; clock           ;
+;  _out_acum[3]                ; clock      ; 8.110  ; 8.110  ; Rise       ; clock           ;
+;  _out_acum[4]                ; clock      ; 8.504  ; 8.504  ; Rise       ; clock           ;
+;  _out_acum[5]                ; clock      ; 8.119  ; 8.119  ; Rise       ; clock           ;
+;  _out_acum[6]                ; clock      ; 8.891  ; 8.891  ; Rise       ; clock           ;
+;  _out_acum[7]                ; clock      ; 8.022  ; 8.022  ; Rise       ; clock           ;
+; _out_alu[*]                  ; clock      ; 7.887  ; 7.887  ; Rise       ; clock           ;
+;  _out_alu[0]                 ; clock      ; 8.008  ; 8.008  ; Rise       ; clock           ;
+;  _out_alu[1]                 ; clock      ; 8.301  ; 8.301  ; Rise       ; clock           ;
+;  _out_alu[2]                 ; clock      ; 7.887  ; 7.887  ; Rise       ; clock           ;
+;  _out_alu[3]                 ; clock      ; 8.263  ; 8.263  ; Rise       ; clock           ;
+;  _out_alu[4]                 ; clock      ; 9.150  ; 9.150  ; Rise       ; clock           ;
+;  _out_alu[5]                 ; clock      ; 9.563  ; 9.563  ; Rise       ; clock           ;
+;  _out_alu[6]                 ; clock      ; 7.887  ; 7.887  ; Rise       ; clock           ;
+;  _out_alu[7]                 ; clock      ; 8.834  ; 8.834  ; Rise       ; clock           ;
+; _out_argument1[*]            ; clock      ; 7.897  ; 7.897  ; Rise       ; clock           ;
+;  _out_argument1[0]           ; clock      ; 8.941  ; 8.941  ; Rise       ; clock           ;
+;  _out_argument1[1]           ; clock      ; 8.160  ; 8.160  ; Rise       ; clock           ;
+;  _out_argument1[2]           ; clock      ; 9.299  ; 9.299  ; Rise       ; clock           ;
+;  _out_argument1[3]           ; clock      ; 9.914  ; 9.914  ; Rise       ; clock           ;
+;  _out_argument1[4]           ; clock      ; 8.850  ; 8.850  ; Rise       ; clock           ;
+;  _out_argument1[5]           ; clock      ; 8.900  ; 8.900  ; Rise       ; clock           ;
+;  _out_argument1[6]           ; clock      ; 7.897  ; 7.897  ; Rise       ; clock           ;
+;  _out_argument1[7]           ; clock      ; 10.014 ; 10.014 ; Rise       ; clock           ;
+; _out_argument2[*]            ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_argument2[0]           ; clock      ; 8.578  ; 8.578  ; Rise       ; clock           ;
+;  _out_argument2[1]           ; clock      ; 9.242  ; 9.242  ; Rise       ; clock           ;
+;  _out_argument2[2]           ; clock      ; 8.751  ; 8.751  ; Rise       ; clock           ;
+;  _out_argument2[3]           ; clock      ; 8.334  ; 8.334  ; Rise       ; clock           ;
+;  _out_argument2[4]           ; clock      ; 9.263  ; 9.263  ; Rise       ; clock           ;
+;  _out_argument2[5]           ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_argument2[6]           ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_argument2[7]           ; clock      ; 10.727 ; 10.727 ; Rise       ; clock           ;
+; _out_argument3[*]            ; clock      ; 8.153  ; 8.153  ; Rise       ; clock           ;
+;  _out_argument3[0]           ; clock      ; 8.477  ; 8.477  ; Rise       ; clock           ;
+;  _out_argument3[1]           ; clock      ; 9.627  ; 9.627  ; Rise       ; clock           ;
+;  _out_argument3[2]           ; clock      ; 9.031  ; 9.031  ; Rise       ; clock           ;
+;  _out_argument3[3]           ; clock      ; 11.056 ; 11.056 ; Rise       ; clock           ;
+;  _out_argument3[4]           ; clock      ; 9.646  ; 9.646  ; Rise       ; clock           ;
+;  _out_argument3[5]           ; clock      ; 8.810  ; 8.810  ; Rise       ; clock           ;
+;  _out_argument3[6]           ; clock      ; 8.153  ; 8.153  ; Rise       ; clock           ;
+;  _out_argument3[7]           ; clock      ; 10.822 ; 10.822 ; Rise       ; clock           ;
+; _out_buf1[*]                 ; clock      ; 7.855  ; 7.855  ; Rise       ; clock           ;
+;  _out_buf1[0]                ; clock      ; 8.232  ; 8.232  ; Rise       ; clock           ;
+;  _out_buf1[1]                ; clock      ; 8.662  ; 8.662  ; Rise       ; clock           ;
+;  _out_buf1[2]                ; clock      ; 7.951  ; 7.951  ; Rise       ; clock           ;
+;  _out_buf1[3]                ; clock      ; 9.968  ; 9.968  ; Rise       ; clock           ;
+;  _out_buf1[4]                ; clock      ; 8.615  ; 8.615  ; Rise       ; clock           ;
+;  _out_buf1[5]                ; clock      ; 9.464  ; 9.464  ; Rise       ; clock           ;
+;  _out_buf1[6]                ; clock      ; 7.855  ; 7.855  ; Rise       ; clock           ;
+;  _out_buf1[7]                ; clock      ; 8.676  ; 8.676  ; Rise       ; clock           ;
+; _out_buf2[*]                 ; clock      ; 8.185  ; 8.185  ; Rise       ; clock           ;
+;  _out_buf2[0]                ; clock      ; 8.767  ; 8.767  ; Rise       ; clock           ;
+;  _out_buf2[1]                ; clock      ; 9.435  ; 9.435  ; Rise       ; clock           ;
+;  _out_buf2[2]                ; clock      ; 8.841  ; 8.841  ; Rise       ; clock           ;
+;  _out_buf2[3]                ; clock      ; 8.994  ; 8.994  ; Rise       ; clock           ;
+;  _out_buf2[4]                ; clock      ; 8.551  ; 8.551  ; Rise       ; clock           ;
+;  _out_buf2[5]                ; clock      ; 8.185  ; 8.185  ; Rise       ; clock           ;
+;  _out_buf2[6]                ; clock      ; 8.829  ; 8.829  ; Rise       ; clock           ;
+;  _out_buf2[7]                ; clock      ; 8.235  ; 8.235  ; Rise       ; clock           ;
+; _out_buf2_ena                ; clock      ; 8.710  ; 8.710  ; Rise       ; clock           ;
+; _out_cell[*]                 ; clock      ; 8.052  ; 8.052  ; Rise       ; clock           ;
+;  _out_cell[0]                ; clock      ; 8.477  ; 8.477  ; Rise       ; clock           ;
+;  _out_cell[1]                ; clock      ; 9.627  ; 9.627  ; Rise       ; clock           ;
+;  _out_cell[2]                ; clock      ; 9.031  ; 9.031  ; Rise       ; clock           ;
+;  _out_cell[3]                ; clock      ; 11.056 ; 11.056 ; Rise       ; clock           ;
+;  _out_cell[4]                ; clock      ; 9.646  ; 9.646  ; Rise       ; clock           ;
+;  _out_cell[5]                ; clock      ; 8.411  ; 8.411  ; Rise       ; clock           ;
+;  _out_cell[6]                ; clock      ; 8.153  ; 8.153  ; Rise       ; clock           ;
+;  _out_cell[7]                ; clock      ; 10.812 ; 10.812 ; Rise       ; clock           ;
+;  _out_cell[8]                ; clock      ; 8.578  ; 8.578  ; Rise       ; clock           ;
+;  _out_cell[9]                ; clock      ; 9.252  ; 9.252  ; Rise       ; clock           ;
+;  _out_cell[10]               ; clock      ; 8.751  ; 8.751  ; Rise       ; clock           ;
+;  _out_cell[11]               ; clock      ; 8.334  ; 8.334  ; Rise       ; clock           ;
+;  _out_cell[12]               ; clock      ; 9.263  ; 9.263  ; Rise       ; clock           ;
+;  _out_cell[13]               ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_cell[14]               ; clock      ; 8.174  ; 8.174  ; Rise       ; clock           ;
+;  _out_cell[15]               ; clock      ; 10.727 ; 10.727 ; Rise       ; clock           ;
+;  _out_cell[16]               ; clock      ; 8.941  ; 8.941  ; Rise       ; clock           ;
+;  _out_cell[17]               ; clock      ; 8.160  ; 8.160  ; Rise       ; clock           ;
+;  _out_cell[18]               ; clock      ; 9.309  ; 9.309  ; Rise       ; clock           ;
+;  _out_cell[19]               ; clock      ; 9.901  ; 9.901  ; Rise       ; clock           ;
+;  _out_cell[20]               ; clock      ; 8.839  ; 8.839  ; Rise       ; clock           ;
+;  _out_cell[21]               ; clock      ; 8.900  ; 8.900  ; Rise       ; clock           ;
+;  _out_cell[22]               ; clock      ; 8.052  ; 8.052  ; Rise       ; clock           ;
+;  _out_cell[23]               ; clock      ; 9.441  ; 9.441  ; Rise       ; clock           ;
+;  _out_cell[24]               ; clock      ; 11.763 ; 11.763 ; Rise       ; clock           ;
+;  _out_cell[25]               ; clock      ; 8.914  ; 8.914  ; Rise       ; clock           ;
+;  _out_cell[26]               ; clock      ; 10.074 ; 10.074 ; Rise       ; clock           ;
+;  _out_cell[27]               ; clock      ; 9.941  ; 9.941  ; Rise       ; clock           ;
+;  _out_cell[28]               ; clock      ; 9.304  ; 9.304  ; Rise       ; clock           ;
+;  _out_cell[29]               ; clock      ; 9.250  ; 9.250  ; Rise       ; clock           ;
+;  _out_cell[30]               ; clock      ; 8.611  ; 8.611  ; Rise       ; clock           ;
+;  _out_cell[31]               ; clock      ; 8.565  ; 8.565  ; Rise       ; clock           ;
+; _out_command[*]              ; clock      ; 8.565  ; 8.565  ; Rise       ; clock           ;
+;  _out_command[0]             ; clock      ; 11.761 ; 11.761 ; Rise       ; clock           ;
+;  _out_command[1]             ; clock      ; 8.914  ; 8.914  ; Rise       ; clock           ;
+;  _out_command[2]             ; clock      ; 10.074 ; 10.074 ; Rise       ; clock           ;
+;  _out_command[3]             ; clock      ; 9.941  ; 9.941  ; Rise       ; clock           ;
+;  _out_command[4]             ; clock      ; 9.294  ; 9.294  ; Rise       ; clock           ;
+;  _out_command[5]             ; clock      ; 9.257  ; 9.257  ; Rise       ; clock           ;
+;  _out_command[6]             ; clock      ; 8.905  ; 8.905  ; Rise       ; clock           ;
+;  _out_command[7]             ; clock      ; 8.565  ; 8.565  ; Rise       ; clock           ;
+; _out_instruction_counter[*]  ; clock      ; 7.362  ; 7.362  ; Rise       ; clock           ;
+;  _out_instruction_counter[0] ; clock      ; 7.362  ; 7.362  ; Rise       ; clock           ;
+;  _out_instruction_counter[1] ; clock      ; 7.991  ; 7.991  ; Rise       ; clock           ;
+;  _out_instruction_counter[2] ; clock      ; 8.254  ; 8.254  ; Rise       ; clock           ;
+;  _out_instruction_counter[3] ; clock      ; 8.036  ; 8.036  ; Rise       ; clock           ;
+;  _out_instruction_counter[4] ; clock      ; 7.379  ; 7.379  ; Rise       ; clock           ;
+;  _out_instruction_counter[5] ; clock      ; 7.909  ; 7.909  ; Rise       ; clock           ;
+;  _out_instruction_counter[6] ; clock      ; 7.912  ; 7.912  ; Rise       ; clock           ;
+;  _out_instruction_counter[7] ; clock      ; 7.947  ; 7.947  ; Rise       ; clock           ;
+; _out_ram[*]                  ; clock      ; 7.356  ; 7.356  ; Rise       ; clock           ;
+;  _out_ram[0]                 ; clock      ; 7.356  ; 7.356  ; Rise       ; clock           ;
+;  _out_ram[1]                 ; clock      ; 7.692  ; 7.692  ; Rise       ; clock           ;
+;  _out_ram[2]                 ; clock      ; 7.743  ; 7.743  ; Rise       ; clock           ;
+;  _out_ram[3]                 ; clock      ; 7.722  ; 7.722  ; Rise       ; clock           ;
+;  _out_ram[4]                 ; clock      ; 7.677  ; 7.677  ; Rise       ; clock           ;
+;  _out_ram[5]                 ; clock      ; 10.679 ; 10.679 ; Rise       ; clock           ;
+;  _out_ram[6]                 ; clock      ; 8.137  ; 8.137  ; Rise       ; clock           ;
+;  _out_ram[7]                 ; clock      ; 8.063  ; 8.063  ; Rise       ; clock           ;
+; _out_stage_counter[*]        ; clock      ; 8.240  ; 8.240  ; Rise       ; clock           ;
+;  _out_stage_counter[0]       ; clock      ; 8.642  ; 8.642  ; Rise       ; clock           ;
+;  _out_stage_counter[1]       ; clock      ; 8.358  ; 8.358  ; Rise       ; clock           ;
+;  _out_stage_counter[2]       ; clock      ; 9.171  ; 9.171  ; Rise       ; clock           ;
+;  _out_stage_counter[3]       ; clock      ; 8.240  ; 8.240  ; Rise       ; clock           ;
++------------------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -1.772 ; -126.664      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.240 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width                                                                                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------------------------------------+
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[0]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[0]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[1]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[1]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[2]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[2]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[3]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[3]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[4]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[4]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[5]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[5]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[6]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[6]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[7]                          ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|q_a[7]                          ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; clock ; Rise       ; ram8:ram|altsyncram:altsyncram_component|altsyncram_r4a1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[0]                         ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[0]                         ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[10]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[10]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[11]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[11]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[12]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[12]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[13]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[13]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[14]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[14]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[15]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[15]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[16]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[16]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[17]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[17]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[18]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[18]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[19]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[19]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[1]                         ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[1]                         ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[20]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[20]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[21]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[21]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[22]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[22]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[23]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[23]                        ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[24]                        ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; rom32:rom|altsyncram:altsyncram_component|altsyncram_1371:auto_generated|q_a[24]                        ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++------------------------------+------------+-------+-------+------------+-----------------+
+; Data Port                    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------------------+------------+-------+-------+------------+-----------------+
+; _out_acum[*]                 ; clock      ; 4.908 ; 4.908 ; Rise       ; clock           ;
+;  _out_acum[0]                ; clock      ; 4.272 ; 4.272 ; Rise       ; clock           ;
+;  _out_acum[1]                ; clock      ; 4.908 ; 4.908 ; Rise       ; clock           ;
+;  _out_acum[2]                ; clock      ; 4.137 ; 4.137 ; Rise       ; clock           ;
+;  _out_acum[3]                ; clock      ; 4.197 ; 4.197 ; Rise       ; clock           ;
+;  _out_acum[4]                ; clock      ; 4.399 ; 4.399 ; Rise       ; clock           ;
+;  _out_acum[5]                ; clock      ; 4.244 ; 4.244 ; Rise       ; clock           ;
+;  _out_acum[6]                ; clock      ; 4.523 ; 4.523 ; Rise       ; clock           ;
+;  _out_acum[7]                ; clock      ; 4.239 ; 4.239 ; Rise       ; clock           ;
+; _out_alu[*]                  ; clock      ; 4.790 ; 4.790 ; Rise       ; clock           ;
+;  _out_alu[0]                 ; clock      ; 4.136 ; 4.136 ; Rise       ; clock           ;
+;  _out_alu[1]                 ; clock      ; 4.346 ; 4.346 ; Rise       ; clock           ;
+;  _out_alu[2]                 ; clock      ; 4.070 ; 4.070 ; Rise       ; clock           ;
+;  _out_alu[3]                 ; clock      ; 4.225 ; 4.225 ; Rise       ; clock           ;
+;  _out_alu[4]                 ; clock      ; 4.657 ; 4.657 ; Rise       ; clock           ;
+;  _out_alu[5]                 ; clock      ; 4.790 ; 4.790 ; Rise       ; clock           ;
+;  _out_alu[6]                 ; clock      ; 4.109 ; 4.109 ; Rise       ; clock           ;
+;  _out_alu[7]                 ; clock      ; 4.527 ; 4.527 ; Rise       ; clock           ;
+; _out_argument1[*]            ; clock      ; 5.024 ; 5.024 ; Rise       ; clock           ;
+;  _out_argument1[0]           ; clock      ; 4.632 ; 4.632 ; Rise       ; clock           ;
+;  _out_argument1[1]           ; clock      ; 4.316 ; 4.316 ; Rise       ; clock           ;
+;  _out_argument1[2]           ; clock      ; 4.719 ; 4.719 ; Rise       ; clock           ;
+;  _out_argument1[3]           ; clock      ; 4.925 ; 4.925 ; Rise       ; clock           ;
+;  _out_argument1[4]           ; clock      ; 4.668 ; 4.668 ; Rise       ; clock           ;
+;  _out_argument1[5]           ; clock      ; 4.595 ; 4.595 ; Rise       ; clock           ;
+;  _out_argument1[6]           ; clock      ; 4.161 ; 4.161 ; Rise       ; clock           ;
+;  _out_argument1[7]           ; clock      ; 5.024 ; 5.024 ; Rise       ; clock           ;
+; _out_argument2[*]            ; clock      ; 5.222 ; 5.222 ; Rise       ; clock           ;
+;  _out_argument2[0]           ; clock      ; 4.469 ; 4.469 ; Rise       ; clock           ;
+;  _out_argument2[1]           ; clock      ; 4.790 ; 4.790 ; Rise       ; clock           ;
+;  _out_argument2[2]           ; clock      ; 4.475 ; 4.475 ; Rise       ; clock           ;
+;  _out_argument2[3]           ; clock      ; 4.390 ; 4.390 ; Rise       ; clock           ;
+;  _out_argument2[4]           ; clock      ; 4.757 ; 4.757 ; Rise       ; clock           ;
+;  _out_argument2[5]           ; clock      ; 4.283 ; 4.283 ; Rise       ; clock           ;
+;  _out_argument2[6]           ; clock      ; 4.290 ; 4.290 ; Rise       ; clock           ;
+;  _out_argument2[7]           ; clock      ; 5.222 ; 5.222 ; Rise       ; clock           ;
+; _out_argument3[*]            ; clock      ; 5.391 ; 5.391 ; Rise       ; clock           ;
+;  _out_argument3[0]           ; clock      ; 4.414 ; 4.414 ; Rise       ; clock           ;
+;  _out_argument3[1]           ; clock      ; 4.902 ; 4.902 ; Rise       ; clock           ;
+;  _out_argument3[2]           ; clock      ; 4.626 ; 4.626 ; Rise       ; clock           ;
+;  _out_argument3[3]           ; clock      ; 5.391 ; 5.391 ; Rise       ; clock           ;
+;  _out_argument3[4]           ; clock      ; 4.864 ; 4.864 ; Rise       ; clock           ;
+;  _out_argument3[5]           ; clock      ; 4.505 ; 4.505 ; Rise       ; clock           ;
+;  _out_argument3[6]           ; clock      ; 4.251 ; 4.251 ; Rise       ; clock           ;
+;  _out_argument3[7]           ; clock      ; 5.309 ; 5.309 ; Rise       ; clock           ;
+; _out_buf1[*]                 ; clock      ; 5.021 ; 5.021 ; Rise       ; clock           ;
+;  _out_buf1[0]                ; clock      ; 4.299 ; 4.299 ; Rise       ; clock           ;
+;  _out_buf1[1]                ; clock      ; 4.392 ; 4.392 ; Rise       ; clock           ;
+;  _out_buf1[2]                ; clock      ; 4.194 ; 4.194 ; Rise       ; clock           ;
+;  _out_buf1[3]                ; clock      ; 5.021 ; 5.021 ; Rise       ; clock           ;
+;  _out_buf1[4]                ; clock      ; 4.466 ; 4.466 ; Rise       ; clock           ;
+;  _out_buf1[5]                ; clock      ; 4.686 ; 4.686 ; Rise       ; clock           ;
+;  _out_buf1[6]                ; clock      ; 4.087 ; 4.087 ; Rise       ; clock           ;
+;  _out_buf1[7]                ; clock      ; 4.404 ; 4.404 ; Rise       ; clock           ;
+; _out_buf2[*]                 ; clock      ; 4.859 ; 4.859 ; Rise       ; clock           ;
+;  _out_buf2[0]                ; clock      ; 4.447 ; 4.447 ; Rise       ; clock           ;
+;  _out_buf2[1]                ; clock      ; 4.859 ; 4.859 ; Rise       ; clock           ;
+;  _out_buf2[2]                ; clock      ; 4.539 ; 4.539 ; Rise       ; clock           ;
+;  _out_buf2[3]                ; clock      ; 4.485 ; 4.485 ; Rise       ; clock           ;
+;  _out_buf2[4]                ; clock      ; 4.421 ; 4.421 ; Rise       ; clock           ;
+;  _out_buf2[5]                ; clock      ; 4.269 ; 4.269 ; Rise       ; clock           ;
+;  _out_buf2[6]                ; clock      ; 4.529 ; 4.529 ; Rise       ; clock           ;
+;  _out_buf2[7]                ; clock      ; 4.299 ; 4.299 ; Rise       ; clock           ;
+; _out_buf2_ena                ; clock      ; 5.554 ; 5.554 ; Rise       ; clock           ;
+; _out_cell[*]                 ; clock      ; 5.879 ; 5.879 ; Rise       ; clock           ;
+;  _out_cell[0]                ; clock      ; 4.414 ; 4.414 ; Rise       ; clock           ;
+;  _out_cell[1]                ; clock      ; 4.902 ; 4.902 ; Rise       ; clock           ;
+;  _out_cell[2]                ; clock      ; 4.626 ; 4.626 ; Rise       ; clock           ;
+;  _out_cell[3]                ; clock      ; 5.391 ; 5.391 ; Rise       ; clock           ;
+;  _out_cell[4]                ; clock      ; 4.864 ; 4.864 ; Rise       ; clock           ;
+;  _out_cell[5]                ; clock      ; 4.333 ; 4.333 ; Rise       ; clock           ;
+;  _out_cell[6]                ; clock      ; 4.251 ; 4.251 ; Rise       ; clock           ;
+;  _out_cell[7]                ; clock      ; 5.299 ; 5.299 ; Rise       ; clock           ;
+;  _out_cell[8]                ; clock      ; 4.469 ; 4.469 ; Rise       ; clock           ;
+;  _out_cell[9]                ; clock      ; 4.800 ; 4.800 ; Rise       ; clock           ;
+;  _out_cell[10]               ; clock      ; 4.475 ; 4.475 ; Rise       ; clock           ;
+;  _out_cell[11]               ; clock      ; 4.390 ; 4.390 ; Rise       ; clock           ;
+;  _out_cell[12]               ; clock      ; 4.757 ; 4.757 ; Rise       ; clock           ;
+;  _out_cell[13]               ; clock      ; 4.283 ; 4.283 ; Rise       ; clock           ;
+;  _out_cell[14]               ; clock      ; 4.290 ; 4.290 ; Rise       ; clock           ;
+;  _out_cell[15]               ; clock      ; 5.222 ; 5.222 ; Rise       ; clock           ;
+;  _out_cell[16]               ; clock      ; 4.632 ; 4.632 ; Rise       ; clock           ;
+;  _out_cell[17]               ; clock      ; 4.316 ; 4.316 ; Rise       ; clock           ;
+;  _out_cell[18]               ; clock      ; 4.729 ; 4.729 ; Rise       ; clock           ;
+;  _out_cell[19]               ; clock      ; 4.913 ; 4.913 ; Rise       ; clock           ;
+;  _out_cell[20]               ; clock      ; 4.656 ; 4.656 ; Rise       ; clock           ;
+;  _out_cell[21]               ; clock      ; 4.595 ; 4.595 ; Rise       ; clock           ;
+;  _out_cell[22]               ; clock      ; 4.271 ; 4.271 ; Rise       ; clock           ;
+;  _out_cell[23]               ; clock      ; 4.810 ; 4.810 ; Rise       ; clock           ;
+;  _out_cell[24]               ; clock      ; 5.879 ; 5.879 ; Rise       ; clock           ;
+;  _out_cell[25]               ; clock      ; 4.704 ; 4.704 ; Rise       ; clock           ;
+;  _out_cell[26]               ; clock      ; 5.061 ; 5.061 ; Rise       ; clock           ;
+;  _out_cell[27]               ; clock      ; 4.975 ; 4.975 ; Rise       ; clock           ;
+;  _out_cell[28]               ; clock      ; 4.827 ; 4.827 ; Rise       ; clock           ;
+;  _out_cell[29]               ; clock      ; 4.790 ; 4.790 ; Rise       ; clock           ;
+;  _out_cell[30]               ; clock      ; 4.493 ; 4.493 ; Rise       ; clock           ;
+;  _out_cell[31]               ; clock      ; 4.461 ; 4.461 ; Rise       ; clock           ;
+; _out_command[*]              ; clock      ; 5.877 ; 5.877 ; Rise       ; clock           ;
+;  _out_command[0]             ; clock      ; 5.877 ; 5.877 ; Rise       ; clock           ;
+;  _out_command[1]             ; clock      ; 4.704 ; 4.704 ; Rise       ; clock           ;
+;  _out_command[2]             ; clock      ; 5.061 ; 5.061 ; Rise       ; clock           ;
+;  _out_command[3]             ; clock      ; 4.975 ; 4.975 ; Rise       ; clock           ;
+;  _out_command[4]             ; clock      ; 4.817 ; 4.817 ; Rise       ; clock           ;
+;  _out_command[5]             ; clock      ; 4.798 ; 4.798 ; Rise       ; clock           ;
+;  _out_command[6]             ; clock      ; 4.605 ; 4.605 ; Rise       ; clock           ;
+;  _out_command[7]             ; clock      ; 4.461 ; 4.461 ; Rise       ; clock           ;
+; _out_instruction_counter[*]  ; clock      ; 4.307 ; 4.307 ; Rise       ; clock           ;
+;  _out_instruction_counter[0] ; clock      ; 3.861 ; 3.861 ; Rise       ; clock           ;
+;  _out_instruction_counter[1] ; clock      ; 4.124 ; 4.124 ; Rise       ; clock           ;
+;  _out_instruction_counter[2] ; clock      ; 4.307 ; 4.307 ; Rise       ; clock           ;
+;  _out_instruction_counter[3] ; clock      ; 4.139 ; 4.139 ; Rise       ; clock           ;
+;  _out_instruction_counter[4] ; clock      ; 3.881 ; 3.881 ; Rise       ; clock           ;
+;  _out_instruction_counter[5] ; clock      ; 4.161 ; 4.161 ; Rise       ; clock           ;
+;  _out_instruction_counter[6] ; clock      ; 4.118 ; 4.118 ; Rise       ; clock           ;
+;  _out_instruction_counter[7] ; clock      ; 4.087 ; 4.087 ; Rise       ; clock           ;
+; _out_ram[*]                  ; clock      ; 5.328 ; 5.328 ; Rise       ; clock           ;
+;  _out_ram[0]                 ; clock      ; 3.903 ; 3.903 ; Rise       ; clock           ;
+;  _out_ram[1]                 ; clock      ; 4.034 ; 4.034 ; Rise       ; clock           ;
+;  _out_ram[2]                 ; clock      ; 4.070 ; 4.070 ; Rise       ; clock           ;
+;  _out_ram[3]                 ; clock      ; 4.055 ; 4.055 ; Rise       ; clock           ;
+;  _out_ram[4]                 ; clock      ; 4.027 ; 4.027 ; Rise       ; clock           ;
+;  _out_ram[5]                 ; clock      ; 5.328 ; 5.328 ; Rise       ; clock           ;
+;  _out_ram[6]                 ; clock      ; 4.234 ; 4.234 ; Rise       ; clock           ;
+;  _out_ram[7]                 ; clock      ; 4.195 ; 4.195 ; Rise       ; clock           ;
+; _out_stage_counter[*]        ; clock      ; 4.599 ; 4.599 ; Rise       ; clock           ;
+;  _out_stage_counter[0]       ; clock      ; 4.372 ; 4.372 ; Rise       ; clock           ;
+;  _out_stage_counter[1]       ; clock      ; 4.281 ; 4.281 ; Rise       ; clock           ;
+;  _out_stage_counter[2]       ; clock      ; 4.599 ; 4.599 ; Rise       ; clock           ;
+;  _out_stage_counter[3]       ; clock      ; 4.296 ; 4.296 ; Rise       ; clock           ;
++------------------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                            ;
++------------------------------+------------+-------+-------+------------+-----------------+
+; Data Port                    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------------------+------------+-------+-------+------------+-----------------+
+; _out_acum[*]                 ; clock      ; 4.137 ; 4.137 ; Rise       ; clock           ;
+;  _out_acum[0]                ; clock      ; 4.272 ; 4.272 ; Rise       ; clock           ;
+;  _out_acum[1]                ; clock      ; 4.908 ; 4.908 ; Rise       ; clock           ;
+;  _out_acum[2]                ; clock      ; 4.137 ; 4.137 ; Rise       ; clock           ;
+;  _out_acum[3]                ; clock      ; 4.197 ; 4.197 ; Rise       ; clock           ;
+;  _out_acum[4]                ; clock      ; 4.399 ; 4.399 ; Rise       ; clock           ;
+;  _out_acum[5]                ; clock      ; 4.244 ; 4.244 ; Rise       ; clock           ;
+;  _out_acum[6]                ; clock      ; 4.523 ; 4.523 ; Rise       ; clock           ;
+;  _out_acum[7]                ; clock      ; 4.239 ; 4.239 ; Rise       ; clock           ;
+; _out_alu[*]                  ; clock      ; 4.070 ; 4.070 ; Rise       ; clock           ;
+;  _out_alu[0]                 ; clock      ; 4.136 ; 4.136 ; Rise       ; clock           ;
+;  _out_alu[1]                 ; clock      ; 4.346 ; 4.346 ; Rise       ; clock           ;
+;  _out_alu[2]                 ; clock      ; 4.070 ; 4.070 ; Rise       ; clock           ;
+;  _out_alu[3]                 ; clock      ; 4.225 ; 4.225 ; Rise       ; clock           ;
+;  _out_alu[4]                 ; clock      ; 4.657 ; 4.657 ; Rise       ; clock           ;
+;  _out_alu[5]                 ; clock      ; 4.790 ; 4.790 ; Rise       ; clock           ;
+;  _out_alu[6]                 ; clock      ; 4.109 ; 4.109 ; Rise       ; clock           ;
+;  _out_alu[7]                 ; clock      ; 4.527 ; 4.527 ; Rise       ; clock           ;
+; _out_argument1[*]            ; clock      ; 4.161 ; 4.161 ; Rise       ; clock           ;
+;  _out_argument1[0]           ; clock      ; 4.632 ; 4.632 ; Rise       ; clock           ;
+;  _out_argument1[1]           ; clock      ; 4.316 ; 4.316 ; Rise       ; clock           ;
+;  _out_argument1[2]           ; clock      ; 4.719 ; 4.719 ; Rise       ; clock           ;
+;  _out_argument1[3]           ; clock      ; 4.925 ; 4.925 ; Rise       ; clock           ;
+;  _out_argument1[4]           ; clock      ; 4.668 ; 4.668 ; Rise       ; clock           ;
+;  _out_argument1[5]           ; clock      ; 4.595 ; 4.595 ; Rise       ; clock           ;
+;  _out_argument1[6]           ; clock      ; 4.161 ; 4.161 ; Rise       ; clock           ;
+;  _out_argument1[7]           ; clock      ; 5.024 ; 5.024 ; Rise       ; clock           ;
+; _out_argument2[*]            ; clock      ; 4.283 ; 4.283 ; Rise       ; clock           ;
+;  _out_argument2[0]           ; clock      ; 4.469 ; 4.469 ; Rise       ; clock           ;
+;  _out_argument2[1]           ; clock      ; 4.790 ; 4.790 ; Rise       ; clock           ;
+;  _out_argument2[2]           ; clock      ; 4.475 ; 4.475 ; Rise       ; clock           ;
+;  _out_argument2[3]           ; clock      ; 4.390 ; 4.390 ; Rise       ; clock           ;
+;  _out_argument2[4]           ; clock      ; 4.757 ; 4.757 ; Rise       ; clock           ;
+;  _out_argument2[5]           ; clock      ; 4.283 ; 4.283 ; Rise       ; clock           ;
+;  _out_argument2[6]           ; clock      ; 4.290 ; 4.290 ; Rise       ; clock           ;
+;  _out_argument2[7]           ; clock      ; 5.222 ; 5.222 ; Rise       ; clock           ;
+; _out_argument3[*]            ; clock      ; 4.251 ; 4.251 ; Rise       ; clock           ;
+;  _out_argument3[0]           ; clock      ; 4.414 ; 4.414 ; Rise       ; clock           ;
+;  _out_argument3[1]           ; clock      ; 4.902 ; 4.902 ; Rise       ; clock           ;
+;  _out_argument3[2]           ; clock      ; 4.626 ; 4.626 ; Rise       ; clock           ;
+;  _out_argument3[3]           ; clock      ; 5.391 ; 5.391 ; Rise       ; clock           ;
+;  _out_argument3[4]           ; clock      ; 4.864 ; 4.864 ; Rise       ; clock           ;
+;  _out_argument3[5]           ; clock      ; 4.505 ; 4.505 ; Rise       ; clock           ;
+;  _out_argument3[6]           ; clock      ; 4.251 ; 4.251 ; Rise       ; clock           ;
+;  _out_argument3[7]           ; clock      ; 5.309 ; 5.309 ; Rise       ; clock           ;
+; _out_buf1[*]                 ; clock      ; 4.087 ; 4.087 ; Rise       ; clock           ;
+;  _out_buf1[0]                ; clock      ; 4.299 ; 4.299 ; Rise       ; clock           ;
+;  _out_buf1[1]                ; clock      ; 4.392 ; 4.392 ; Rise       ; clock           ;
+;  _out_buf1[2]                ; clock      ; 4.194 ; 4.194 ; Rise       ; clock           ;
+;  _out_buf1[3]                ; clock      ; 5.021 ; 5.021 ; Rise       ; clock           ;
+;  _out_buf1[4]                ; clock      ; 4.466 ; 4.466 ; Rise       ; clock           ;
+;  _out_buf1[5]                ; clock      ; 4.686 ; 4.686 ; Rise       ; clock           ;
+;  _out_buf1[6]                ; clock      ; 4.087 ; 4.087 ; Rise       ; clock           ;
+;  _out_buf1[7]                ; clock      ; 4.404 ; 4.404 ; Rise       ; clock           ;
+; _out_buf2[*]                 ; clock      ; 4.269 ; 4.269 ; Rise       ; clock           ;
+;  _out_buf2[0]                ; clock      ; 4.447 ; 4.447 ; Rise       ; clock           ;
+;  _out_buf2[1]                ; clock      ; 4.859 ; 4.859 ; Rise       ; clock           ;
+;  _out_buf2[2]                ; clock      ; 4.539 ; 4.539 ; Rise       ; clock           ;
+;  _out_buf2[3]                ; clock      ; 4.485 ; 4.485 ; Rise       ; clock           ;
+;  _out_buf2[4]                ; clock      ; 4.421 ; 4.421 ; Rise       ; clock           ;
+;  _out_buf2[5]                ; clock      ; 4.269 ; 4.269 ; Rise       ; clock           ;
+;  _out_buf2[6]                ; clock      ; 4.529 ; 4.529 ; Rise       ; clock           ;
+;  _out_buf2[7]                ; clock      ; 4.299 ; 4.299 ; Rise       ; clock           ;
+; _out_buf2_ena                ; clock      ; 4.471 ; 4.471 ; Rise       ; clock           ;
+; _out_cell[*]                 ; clock      ; 4.251 ; 4.251 ; Rise       ; clock           ;
+;  _out_cell[0]                ; clock      ; 4.414 ; 4.414 ; Rise       ; clock           ;
+;  _out_cell[1]                ; clock      ; 4.902 ; 4.902 ; Rise       ; clock           ;
+;  _out_cell[2]                ; clock      ; 4.626 ; 4.626 ; Rise       ; clock           ;
+;  _out_cell[3]                ; clock      ; 5.391 ; 5.391 ; Rise       ; clock           ;
+;  _out_cell[4]                ; clock      ; 4.864 ; 4.864 ; Rise       ; clock           ;
+;  _out_cell[5]                ; clock      ; 4.333 ; 4.333 ; Rise       ; clock           ;
+;  _out_cell[6]                ; clock      ; 4.251 ; 4.251 ; Rise       ; clock           ;
+;  _out_cell[7]                ; clock      ; 5.299 ; 5.299 ; Rise       ; clock           ;
+;  _out_cell[8]                ; clock      ; 4.469 ; 4.469 ; Rise       ; clock           ;
+;  _out_cell[9]                ; clock      ; 4.800 ; 4.800 ; Rise       ; clock           ;
+;  _out_cell[10]               ; clock      ; 4.475 ; 4.475 ; Rise       ; clock           ;
+;  _out_cell[11]               ; clock      ; 4.390 ; 4.390 ; Rise       ; clock           ;
+;  _out_cell[12]               ; clock      ; 4.757 ; 4.757 ; Rise       ; clock           ;
+;  _out_cell[13]               ; clock      ; 4.283 ; 4.283 ; Rise       ; clock           ;
+;  _out_cell[14]               ; clock      ; 4.290 ; 4.290 ; Rise       ; clock           ;
+;  _out_cell[15]               ; clock      ; 5.222 ; 5.222 ; Rise       ; clock           ;
+;  _out_cell[16]               ; clock      ; 4.632 ; 4.632 ; Rise       ; clock           ;
+;  _out_cell[17]               ; clock      ; 4.316 ; 4.316 ; Rise       ; clock           ;
+;  _out_cell[18]               ; clock      ; 4.729 ; 4.729 ; Rise       ; clock           ;
+;  _out_cell[19]               ; clock      ; 4.913 ; 4.913 ; Rise       ; clock           ;
+;  _out_cell[20]               ; clock      ; 4.656 ; 4.656 ; Rise       ; clock           ;
+;  _out_cell[21]               ; clock      ; 4.595 ; 4.595 ; Rise       ; clock           ;
+;  _out_cell[22]               ; clock      ; 4.271 ; 4.271 ; Rise       ; clock           ;
+;  _out_cell[23]               ; clock      ; 4.810 ; 4.810 ; Rise       ; clock           ;
+;  _out_cell[24]               ; clock      ; 5.879 ; 5.879 ; Rise       ; clock           ;
+;  _out_cell[25]               ; clock      ; 4.704 ; 4.704 ; Rise       ; clock           ;
+;  _out_cell[26]               ; clock      ; 5.061 ; 5.061 ; Rise       ; clock           ;
+;  _out_cell[27]               ; clock      ; 4.975 ; 4.975 ; Rise       ; clock           ;
+;  _out_cell[28]               ; clock      ; 4.827 ; 4.827 ; Rise       ; clock           ;
+;  _out_cell[29]               ; clock      ; 4.790 ; 4.790 ; Rise       ; clock           ;
+;  _out_cell[30]               ; clock      ; 4.493 ; 4.493 ; Rise       ; clock           ;
+;  _out_cell[31]               ; clock      ; 4.461 ; 4.461 ; Rise       ; clock           ;
+; _out_command[*]              ; clock      ; 4.461 ; 4.461 ; Rise       ; clock           ;
+;  _out_command[0]             ; clock      ; 5.877 ; 5.877 ; Rise       ; clock           ;
+;  _out_command[1]             ; clock      ; 4.704 ; 4.704 ; Rise       ; clock           ;
+;  _out_command[2]             ; clock      ; 5.061 ; 5.061 ; Rise       ; clock           ;
+;  _out_command[3]             ; clock      ; 4.975 ; 4.975 ; Rise       ; clock           ;
+;  _out_command[4]             ; clock      ; 4.817 ; 4.817 ; Rise       ; clock           ;
+;  _out_command[5]             ; clock      ; 4.798 ; 4.798 ; Rise       ; clock           ;
+;  _out_command[6]             ; clock      ; 4.605 ; 4.605 ; Rise       ; clock           ;
+;  _out_command[7]             ; clock      ; 4.461 ; 4.461 ; Rise       ; clock           ;
+; _out_instruction_counter[*]  ; clock      ; 3.861 ; 3.861 ; Rise       ; clock           ;
+;  _out_instruction_counter[0] ; clock      ; 3.861 ; 3.861 ; Rise       ; clock           ;
+;  _out_instruction_counter[1] ; clock      ; 4.124 ; 4.124 ; Rise       ; clock           ;
+;  _out_instruction_counter[2] ; clock      ; 4.307 ; 4.307 ; Rise       ; clock           ;
+;  _out_instruction_counter[3] ; clock      ; 4.139 ; 4.139 ; Rise       ; clock           ;
+;  _out_instruction_counter[4] ; clock      ; 3.881 ; 3.881 ; Rise       ; clock           ;
+;  _out_instruction_counter[5] ; clock      ; 4.161 ; 4.161 ; Rise       ; clock           ;
+;  _out_instruction_counter[6] ; clock      ; 4.118 ; 4.118 ; Rise       ; clock           ;
+;  _out_instruction_counter[7] ; clock      ; 4.087 ; 4.087 ; Rise       ; clock           ;
+; _out_ram[*]                  ; clock      ; 3.903 ; 3.903 ; Rise       ; clock           ;
+;  _out_ram[0]                 ; clock      ; 3.903 ; 3.903 ; Rise       ; clock           ;
+;  _out_ram[1]                 ; clock      ; 4.034 ; 4.034 ; Rise       ; clock           ;
+;  _out_ram[2]                 ; clock      ; 4.070 ; 4.070 ; Rise       ; clock           ;
+;  _out_ram[3]                 ; clock      ; 4.055 ; 4.055 ; Rise       ; clock           ;
+;  _out_ram[4]                 ; clock      ; 4.027 ; 4.027 ; Rise       ; clock           ;
+;  _out_ram[5]                 ; clock      ; 5.328 ; 5.328 ; Rise       ; clock           ;
+;  _out_ram[6]                 ; clock      ; 4.234 ; 4.234 ; Rise       ; clock           ;
+;  _out_ram[7]                 ; clock      ; 4.195 ; 4.195 ; Rise       ; clock           ;
+; _out_stage_counter[*]        ; clock      ; 4.281 ; 4.281 ; Rise       ; clock           ;
+;  _out_stage_counter[0]       ; clock      ; 4.372 ; 4.372 ; Rise       ; clock           ;
+;  _out_stage_counter[1]       ; clock      ; 4.281 ; 4.281 ; Rise       ; clock           ;
+;  _out_stage_counter[2]       ; clock      ; 4.599 ; 4.599 ; Rise       ; clock           ;
+;  _out_stage_counter[3]       ; clock      ; 4.296 ; 4.296 ; Rise       ; clock           ;
++------------------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -6.319   ; 0.0   ; 0.0      ; 0.0     ; -2.064              ;
+;  clock           ; -6.319   ; 0.240 ; N/A      ; N/A     ; -2.064              ;
+; Design-wide TNS  ; -413.891 ; 0.0   ; 0.0      ; 0.0     ; N/A                 ;
+;  clock           ; -413.891 ; 0.000 ; N/A      ; N/A     ; N/A                 ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 6690     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 6690     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design.
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design.
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 117   ; 117  ;
+; Unconstrained Output Port Paths ; 128   ; 128  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Mon Jan 23 21:18:59 2017
+Info: Command: quartus_sta SoftCpu -c SoftCpu
+Info: qsta_default_script.tcl version: #3
+Warning: Found USE_TIMEQUEST_TIMING_ANALYZER=OFF. The TimeQuest Timing Analyzer is not the default Timing Analysis Tool during full compilation.
+Critical Warning: Synopsys Design Constraints File file not found: 'SoftCpu.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clock clock
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -6.319
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -6.319      -413.891 clock 
+Info: Worst-case hold slack is 0.625
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.625         0.000 clock 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 117 output pins without output pin load capacitance assignment
+    Info: Pin "_out_acum[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_acum[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_acum[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_acum[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_acum[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_acum[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_acum[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_acum[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_stage_counter[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_stage_counter[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_stage_counter[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_stage_counter[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_instruction_counter[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_command[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument1[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument2[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_argument3[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[20]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[21]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[22]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[23]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[24]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[25]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[26]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[27]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[28]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[29]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[30]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_cell[31]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_ram[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_alu[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf1[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "_out_buf2_ena" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.772
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.772      -126.664 clock 
+Info: Worst-case hold slack is 0.240
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.240         0.000 clock 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Mon Jan 23 21:19:02 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

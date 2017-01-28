@@ -1,0 +1,64 @@
+Quartus II Archive log --	D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.qarlog
+
+Archive:	D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.qar
+Date:		Thu Jan 26 16:16:57 2017
+Quartus II		8.0 Build 215 05/29/2008 SJ Full Version
+
+	=========== Files Selected: ===========
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.asm.rpt
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.done
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.fit.rpt
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.fit.smsg
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.fit.summary
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.flow.rpt
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.map.rpt
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.map.summary
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.pin
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.pof
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.qsf
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.sim.rpt
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.sof
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.sta.rpt
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.sta.summary
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.tan.rpt
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.tan.summary
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.tdf
+D:/Projects/Quartus/Projects/SoftCpu/SoftCpu.vwf
+D:/Projects/Quartus/Projects/SoftCpu/db/SoftCpu.cbx.xml
+D:/Projects/Quartus/Projects/SoftCpu/db/SoftCpu.qpf
+D:/Projects/Quartus/Projects/SoftCpu/db/SoftCpu.sim.cvwf
+D:/Projects/Quartus/Projects/SoftCpu/db/add_sub_g1j.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/altsyncram_1371.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/altsyncram_5371.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/altsyncram_gra1.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/altsyncram_r4a1.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_6hh.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_a7h.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_e7h.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_f7h.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_phg.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_q8h.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_qvh.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_r8h.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_t8h.tdf
+D:/Projects/Quartus/Projects/SoftCpu/db/cntr_u8h.tdf
+D:/Projects/Quartus/Projects/SoftCpu/lib/alu8.inc
+D:/Projects/Quartus/Projects/SoftCpu/lib/alu8.qip
+D:/Projects/Quartus/Projects/SoftCpu/lib/alu8.tdf
+D:/Projects/Quartus/Projects/SoftCpu/lib/ram8.inc
+D:/Projects/Quartus/Projects/SoftCpu/lib/ram8.qip
+D:/Projects/Quartus/Projects/SoftCpu/lib/ram8.tdf
+D:/Projects/Quartus/Projects/SoftCpu/lib/rom16.inc
+D:/Projects/Quartus/Projects/SoftCpu/lib/rom16.qip
+D:/Projects/Quartus/Projects/SoftCpu/lib/rom16.tdf
+D:/Projects/Quartus/Projects/SoftCpu/lib/rom32.inc
+D:/Projects/Quartus/Projects/SoftCpu/lib/rom32.qip
+D:/Projects/Quartus/Projects/SoftCpu/lib/rom32.tdf
+D:/Projects/Quartus/Projects/SoftCpu/rom16.mif
+D:/Projects/Quartus/Projects/SoftCpu/rom32.mif
+D:/Projects/Quartus/Projects/SoftCpu/serv_req_info.txt
+d:/projects/quartus/80/80/quartus/bin/assignment_defaults.qdf
+	======= Total: 53 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

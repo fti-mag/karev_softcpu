@@ -1,0 +1,345 @@
+title "SoftCpu";
+
+include "lpm_counter.inc";
+
+include "rom32.inc";
+include "ram8.inc";
+include "alu8.inc";
+
+-- commands
+constant NOP = 0;
+constant SET = 1;
+constant READ = 2;
+constant WRITE = 3;
+constant ADD = 4;
+constant SUB = 5;
+constant ADD_TO = 6;
+constant SUB_FROM = 7;
+
+constant JUMP = 8;
+constant JUMP_IF = 9;
+constant JUMP_ACUM = 10;
+
+constant A_WRITE = 16;
+constant A_WRITE_ADDR = 17;
+constant A_COPY = 18;
+constant A_ADD = 19;
+constant A_SUB = 20;
+constant A_ADD_ADDR = 21;
+constant A_SUB_ADDR = 22;
+constant A_ADD_TO = 23;
+constant A_SUB_FROM = 24;
+constant A_JUMP_IF_ADDR = 25;
+
+constant RESET = 255;
+
+constant STAGES = 20;
+
+subdesign SoftCpu
+(
+	clock: input;
+	_out_acum[7..0]: output;
+	_out_stage_counter[4..0]: output;
+	_out_instruction_counter[7..0]: output;
+	_out_command[7..0]: output;
+	_out_argument1[7..0]: output;
+	_out_argument2[7..0]: output;
+	_out_argument3[7..0]: output;
+	_out_cell[31..0]: output;
+	_out_ram[7..0]: output;
+	_out_alu[7..0]: output;
+	
+	_out_buf1[7..0]: output;
+	_out_buf2[7..0]: output;
+	_out_buf2_ena: output;
+)
+
+variable
+	stage_counter: LPM_Counter with (lpm_width=5, lpm_modulus=STAGES);
+	instruction_counter: LPM_Counter with (lpm_width=8);
+	
+	write_acum_en: node;
+	write_ram_en: node;
+	calc_alu_en: node;
+	
+	acum[7..0]: DFFE;
+	buf1[7..0]: DFFE;
+	buf2[7..0]: DFFE;
+	buf3[7..0]: DFFE;
+	buf4[7..0]: DFFE;
+	buf5[7..0]: DFFE;
+	buf6[7..0]: DFFE;
+	rom: ROM32;
+	ram: RAM8;
+	alu: ALU8;
+	
+	command[7..0]: node;
+	argument1[7..0]: node;
+	argument2[7..0]: node;
+	argument3[7..0]: node;
+	
+begin
+	stage_counter.clock = clock;
+	instruction_counter.clock = clock;
+	acum[].clk = clock;
+	buf1[].clk = clock;
+	buf2[].clk = clock;
+	buf3[].clk = clock;
+	buf4[].clk = clock;
+	buf5[].clk = clock;
+	buf6[].clk = clock;
+	rom.clock = clock;
+	ram.clock = clock;
+	alu.clock = clock;
+	
+	write_acum_en = GND;
+	write_ram_en = GND;
+	calc_alu_en = GND;
+	
+	acum[].ena = write_acum_en;
+	ram.wren = write_ram_en;
+	alu.clken = calc_alu_en;
+	
+	instruction_counter.clk_en = stage_counter.q[] >= (STAGES - 1);
+	
+	rom.address[] = instruction_counter.q[];
+	
+	command[] = rom.q[31..24];
+	argument1[] = rom.q[23..16];
+	argument2[] = rom.q[15..8];
+	argument3[] = rom.q[7..0];
+	
+	
+	if command[] == SET then
+		write_acum_en = VCC;
+		acum[].d = argument1[];
+	end if;
+	
+	if command[] == READ then
+		ram.address[] = argument1[];
+		
+		if stage_counter.q[] == 5 then
+			write_acum_en = VCC;
+		end if;
+		
+		acum[].d = ram.q[];
+	end if;
+	
+	if command[] == WRITE then
+		ram.address[] = acum[].q;
+		write_ram_en = VCC;
+		ram.data[] = argument1[];
+	end if;
+	
+	if command[] == ADD or command[] == SUB then
+		if stage_counter.q[] < 5 then
+			ram.address[] = argument1[];
+			buf1[].d = ram.q[];
+			buf1[].ena = VCC;
+		end if;
+		
+		if stage_counter.q[] >= 5  & stage_counter.q[] < 7 then
+			alu.dataa[] = acum[].q;
+			alu.datab[] = buf1[].q;
+			calc_alu_en = VCC;
+		end if;
+		if command[] == ADD then
+			alu.add_sub = VCC;
+		end if;
+		
+		if stage_counter.q[] == 7 then
+			acum[].d = alu.result[];
+			write_acum_en = VCC;
+		end if;
+		
+	end if;
+	
+	if command[] == ADD_TO or command[] == SUB_FROM then
+		alu.dataa[] = acum[].q;
+		alu.datab[] = argument1[];
+		if command[] == ADD then
+			alu.add_sub = VCC;
+		end if;
+		acum[].d = alu.result[];
+		
+		if stage_counter.q[] >= 2  & stage_counter.q[] < 4 then
+			calc_alu_en = VCC;
+		end if;
+		
+		if stage_counter.q[] == 4 then
+			write_acum_en = VCC;
+		end if;
+		
+	end if;
+	
+	if command[] == JUMP or command[] == JUMP_IF or command[] == JUMP_ACUM then
+		if command[] == JUMP then
+			instruction_counter.data[] = argument1[];
+		end if;
+		
+		if command[] == JUMP_IF then
+			if acum[].q > 0 then
+				instruction_counter.data[] = argument1[];
+			end if;
+		end if;
+		
+		if command[] == JUMP_ACUM then
+			instruction_counter.data[] = acum[].q;
+		end if;
+		
+		instruction_counter.sload = VCC;
+	end if;
+	
+	if command[] == A_WRITE then
+		ram.address[] = argument1[];
+		ram.data[] = argument2[];
+		write_ram_en = VCC;
+	end if;
+	
+	if command[] == A_WRITE_ADDR then
+		if stage_counter.q[] < 5 then
+			ram.address[] = argument1[];
+			buf1[].d = ram.q[];
+			buf1[].ena = VCC;
+		end if;
+		
+		if stage_counter.q[] >= 5 then
+			ram.address[] = buf1[].q;
+			ram.data[] = argument2[];
+			write_ram_en = VCC;
+		end if;
+	end if;
+	
+	if command[] == A_COPY then
+		if stage_counter.q[] < 4 then
+			ram.address[] = argument1[];
+			buf1[].d = ram.q[];
+			buf1[].ena = VCC;
+		else
+			ram.address[] = argument2[];
+			ram.data[] = buf1[].q;
+			write_ram_en = VCC;
+		end if;
+		
+	end if;
+	
+	if command[] == A_ADD or command[] == A_SUB then
+		if stage_counter.q[] < 5 then
+			ram.address[] = argument1[];
+			buf1[].d = ram.q[];
+			buf1[].ena = VCC;
+		end if;
+		if stage_counter.q[] >= 5 and stage_counter.q[] < 8 then
+			ram.address[] = argument2[];
+			buf2[].d = ram.q[];
+			buf2[].ena = VCC;
+			_out_buf2_ena = VCC;
+		end if;
+		if stage_counter.q[] >=8 and stage_counter.q[] < 10 then
+			alu.dataa[] = buf1[].q;
+			alu.datab[] = buf2[].q;
+			calc_alu_en = VCC;
+			if command[] == A_ADD then
+				alu.add_sub = VCC;
+			end if;
+		end if;
+		if stage_counter.q[] >= 10  then
+			ram.address[] = argument3[];
+			ram.data[] = alu.result[];
+			write_ram_en = VCC;
+		end if;
+	end if;
+	
+	if command[] == A_ADD_ADDR or command[] == A_SUB_ADDR then
+		if stage_counter.q[] < 5 then
+			ram.address[] = argument1[];
+			buf1[].d = ram.q[];
+			buf1[].ena = VCC;
+		end if;
+		if stage_counter.q[] >= 5 and stage_counter.q[] < 7 then
+			ram.address[] = buf1[].q;
+			buf2[].d = ram.q[];
+			buf2[].ena = VCC;
+		end if;
+		if stage_counter.q[] >= 7 and stage_counter.q[] < 9 then
+			ram.address[] = argument2[];
+			buf3[].d = ram.q[];
+			buf3[].ena = VCC;
+		end if;
+		if stage_counter.q[] >= 9 and stage_counter.q[] < 11 then
+			ram.address[] = buf3[].q;
+			buf4[].d = ram.q[];
+			buf4[].ena = VCC;
+		end if;
+		if stage_counter.q[] >= 11 and stage_counter.q[] < 13 then
+			ram.address[] = argument3[];
+			buf5[].d = ram.q[];
+			buf5[].ena = VCC;
+		end if;
+		if stage_counter.q[] >=17 and stage_counter.q[] < 19 then
+			alu.dataa[] = buf2[].q;
+			alu.datab[] = buf4[].q;
+			calc_alu_en = VCC;
+			if command[] == A_ADD_ADDR then
+				alu.add_sub = VCC;
+			end if;
+		end if;
+		if stage_counter.q[] >= 19  then
+			ram.address[] = buf5[].q;
+			ram.data[] = alu.result[];
+			write_ram_en = VCC;
+		end if;
+	end if;
+	
+	if command[] == A_ADD_TO or command[] == A_SUB_FROM then
+		if stage_counter.q[] < 5 then
+			ram.address[] = argument1[];
+			buf1[].d = ram.q[];
+			buf1[].ena = VCC;
+		end if;
+		if stage_counter.q[] >=8 and stage_counter.q[] < 10 then
+			alu.dataa[] = buf1[].q;
+			alu.datab[] = argument2[];
+			calc_alu_en = VCC;
+			if command[] == A_ADD_TO then
+				alu.add_sub = VCC;
+			end if;
+		end if;
+		if stage_counter.q[] >= 10 then
+			ram.address[] = argument1[];
+			ram.data[] = alu.result[];
+			write_ram_en = VCC;
+		end if;
+	end if;	
+	
+	if command[] == A_JUMP_IF_ADDR then
+		if stage_counter.q[] < 5 then
+			ram.address[] = argument1[];
+			buf1[].d = ram.q[];
+			buf1[].ena = VCC;
+		end if;
+		if stage_counter.q[] >= 5 then
+			if buf1[].q > 0 then			
+				instruction_counter.data[] = argument2[];
+				instruction_counter.sload = VCC;
+			end if;
+		end if; 
+	end if;
+	
+	if command[] == RESET then
+		instruction_counter.sclr = VCC;
+	end if;
+	
+	_out_alu[] = alu.result[];
+	_out_ram[] = ram.q[];
+	_out_acum[] = acum[].q;
+	_out_command[] = command[];
+	_out_argument1[] = argument1[];
+	_out_argument2[] = argument2[];
+	_out_argument3[] = argument3[];
+	_out_cell[] = rom.q[];
+	_out_stage_counter[] = stage_counter.q[];
+	_out_instruction_counter[] = instruction_counter.q[];
+	_out_buf1[] = buf1[].q;
+	_out_buf2[] = buf2[].q;
+end;
